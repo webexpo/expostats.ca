@@ -1,0 +1,21 @@
+{
+  "versions": [
+    {
+      "version_no_maj" : "0",
+      "version_no_min" : "5",
+      "month"          : "6",
+      "year"           : "2014",
+      "desc_fr"        : "Lancement initial",
+      "desc_en"        : "Initial launch"
+    },
+    { 
+      "version_no_maj" : "1",
+      "version_no_min" : "0",
+      "month"          : "11",
+      "year"           : "2018",
+      "desc_fr"        : "Mise à jour majeure des outils d'interprétation",
+      "desc_en"        : "Major update of analysis tools",
+      "ref"            : "https://academic.oup.com/annweh/article/63/3/267/5248301?searchresult=1"
+    }
+  ]
+}

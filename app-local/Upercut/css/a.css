@@ -1,0 +1,372 @@
+﻿
+body
+{
+	font-family: Tahoma, Sans-Serif;
+	margin: 1px 1px 0 1px;
+}
+
+a
+{
+	color: rgb(32,64,128);
+	text-decoration: underline;
+}
+#appletTbl
+{
+	font-family: Sans-Serif;
+	width: 950px;
+	border-collapse: collapse;
+	margin-left: 1em;
+	border: 1px solid black;
+	margin-right: 2px;
+}
+#substanceSelectionTbl
+{
+	border-collapse: collapse;
+	font-weight: bold;
+	width: 100%;
+}
+
+#substanceSelectionTbl select
+{
+	font-family: Sans-Serif;
+	font-size: 1em;
+	border: 1px solid black;
+}
+
+#substanceSelectionTbl td
+{
+	text-align: left;
+	vertical-align: middle;
+	margin-left: 1em;
+}
+
+#substanceSelectionTbl .lbl
+{
+	font-size: .8em;
+	font-weight: bold;
+}
+#appletTbl td
+{
+	background-color: rgb(215,228,188);
+}
+#appletTbl .lblRight
+{
+	text-align: right;
+	font-size: .8em;
+	background-color: rgb(234,241,221);
+	font-weight: bold;
+	padding-right: .1em;
+}
+#appletTbl .col2
+{
+	text-align: center;
+	font-size: .9em;
+	font-weight: bold;
+}
+#appletTbl .col4
+{
+	padding: 1px 0 1px 0;
+	text-align: left;
+	font-size: .9em;
+	padding-left: .5em;
+	background-color: rgb(234,241,221);
+}
+#appletTbl .lblTop
+{
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	border: solid 1px black;
+	padding: 6px;
+	background-color: rgb(234,241,221);
+}
+#appletTbl .lblAnimal
+{
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	border: solid 1px black;
+	padding: 3px;
+	background-color: rgb(194,214,154);
+}
+
+#userDataTbl
+{
+	font-family: Sans-Serif;
+	width: 100%;
+	border-collapse: collapse;
+}
+#userDataTbl td
+{
+	background-color: rgb(215,228,188);
+}
+#userDataTbl .lbl
+{
+	font-size: .8em;
+	background-color: rgb(234,241,221);
+	padding: 5px 0px 5px 0px;
+}
+
+#userDataTbl .left
+{
+	text-align: left;
+	border-left: 1px solid black;
+	padding-left: 10px;
+}
+
+#userDataTbl .right
+{
+	text-align: left;
+	border-right: 1px solid black;
+}
+
+#userDataTbl .bottom
+{
+	border-bottom: 1px solid black;
+}
+
+#userDataTbl .duration
+{
+	padding: 5px 0 5px 0;
+	text-align: center;
+	font-size: .9em;
+	font-weight: bold;
+}
+#userDataTbl .lblBodyParts
+{
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	border: solid 1px black;
+	border-width: 1px 1px 0px 1px;
+	padding: 3px;
+	background-color: rgb(194,214,154);
+}
+
+#CASL
+{
+	text-align: right;
+	margin-right: 5px;
+}
+#CASL option
+{
+	padding-right: 5px;
+}
+
+a:visited
+{
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: none;
+	background-color: rgb(240,240,240);
+	color: rgb(255,48,48);
+}
+
+#substanceSearchTbl
+{
+	width: 100%;
+}
+
+#srchWin
+{
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	background-color: rgb(194,214,154);
+	border: 2px solid rgb(100,100,100);
+}
+
+#srchWin .inner
+{
+	border: 1px solid black;
+	padding: 2px;
+	background-color: rgb(234,241,221);
+}
+#srchWin .lbl
+{
+	font-size: .9em;
+	font-weight: bold;
+	color: rgb(97, 107, 77 );
+}
+
+#srchRes
+{
+	height: 20em;
+	width: 95%;
+	overflow: auto;
+	border: 1px solid black;
+	padding: 2px;
+	background-color: White;
+	white-space: inherit;
+}
+
+.srchSel
+{
+	font-size: .8em;
+	padding: .1em;
+	display: block;
+}
+.srchSel:hover
+{
+	background-color: rgb(234,241,221);
+	color: rgb(150,0,0);
+}
+
+
+.button
+{
+	float: left;
+	height: auto;
+	font-family: Sans-Serif;
+	font-size: .8em;
+	text-align: center;
+	padding: 5px;
+	border-width: 3px;
+	border-style: double;
+	margin: .5em .5em .5em 0;
+	display: block;
+}
+.button:link, .button:visited
+{
+	color: rgb(40,140,40);
+	background-color: rgb(234,241,221);
+	font-weight: bold;
+	text-decoration: none;
+	border-color: black;
+}
+.button:hover
+{
+	background-color: rgb(234,241,221);
+	color: black;
+	border-color: rgb(194,214,154);
+	border-style: dotted;
+}
+
+#menu
+{
+	float: right;
+	margin: 5px 10px 20px 5px;
+}
+
+#dhrCalc
+{
+	width:218px ;
+	background-color: white;
+	border-collapse:collapse;
+}
+#dhrCalc td
+{
+	background-color:White;
+	border: 2px solid black;
+	
+}
+#t_dhrCalc
+{
+	font-size:1.2em;
+	font-weight:bold;
+}
+#inclPc
+{
+}
+.pc
+{
+	width: 70px;
+	height:70px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+#t_generalWarnings
+{
+	letter-spacing: .05em;
+	word-spacing: .1em;
+	color:Maroon;
+}
+#t_riskAssessment 
+{
+	vertical-align:middle;
+	background-color: red;
+	letter-spacing: .05em;
+	word-spacing: .1em;
+	line-spacing:.25em;
+	padding: 1.5em;
+	text-align: justify;
+}
+#warningMessages li, #riskPhrases li
+{
+	list-style-type:disc;
+	list-style-position:inside ;
+	font-size:.85em;
+}
+#warningMessages span, #riskPhrases span
+{
+	color:Red;
+	font-variant:small-caps;
+	font-weight:bold;
+	letter-spacing:.1em;
+}
+#riskPhrases span
+{
+	color:Blue;
+}
+ul
+{
+	margin:0;
+}
+
+#appletTbl .results td
+{
+	background-color:White;
+}
+.results td
+{
+	background-color:White; 
+}
+
+#appletTbl .results td .green 
+{
+	background-color : rgb(64,255,64);
+}
+#appletTbl .results td .orange 
+{
+	background-color : rgb(255,160,32);
+}
+#appletTbl .results td .red 
+{
+	background-color : rgb(255,96,96);
+	margin:3px 3px 3px 3px;
+}
+
+/* FLOT */
+#FLOT_graph .legendLabel
+{
+	font-family:SansSerif;
+}
+#FLOT_graph td.legendColorBox, #FLOT_graph td.legendLabel
+{
+	background-color:White;
+}
+#FLOT_graph div.legend
+{
+	border:1px solid black;
+} 
+.show
+{
+	display:block;
+}
+.showv
+{
+	visibility:visible;
+}
+.hide
+{
+	display:none;	
+}
+.hidev
+{
+	visibility:hidden;
+}

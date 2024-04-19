@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+ <head>
+	<script src="js/jquery.js"></script>
+        <script src="js/moment-with-locales.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129886253-1"></script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            var dte = new Date();
+            gtag('js', dte);
+            gtag('config', 'UA-129886253-1');
+            console.log("GA", window.location.href.match(/[a-z\.]+#?$/)[0], dte);
+            
+            $tbl = $('.version-history')
+            var lang = $('html').attr('lang')
+            let desc_attr = `desc_${lang}`
+            $.getJSON('versions.json', function(data) {
+              let versions = data.versions
+              /*versions.sort(function(ver1, ver2) {
+                let v1 = `${ver1.version_no_maj}${ver1.version_no_min}`
+                let v2 = `${ver2.version_no_maj}${ver2.version_no_min}`
+                let cmpVal = v1 < v2 ? 1 : ( v1 > v2 ? -1 : 0)
+                return cmpVal
+              })*/
+              versions.forEach(function(version) {
+                $tr = $("<tr>")
+                $tr.append($("<td>").append(`${version.version_no_maj}${$tbl.data('versionSeparator')}${version.version_no_min}`))
+                $tr.append($("<td>").append(`${version[desc_attr]}`))
+                $tr.append($("<td>").append(moment(`${version.year}-${parseInt(version.month)}`, "YYYY-MM").locale($('html').attr('lang')).format('MMM YYYY')))
+                $tr.append($("<td>").append(version.ref ? $("<a target='_blank'>").attr('href', version.ref).append($tbl.data('linkText')) : "--"))
+                $tbl.find('tbody').append($tr)
+              })
+            })
+            $('.toggle-version-history').click(function(event) {
+              event.preventDefault();
+              $tbl = $(this).next('table')
+              let oldText = $tbl.is(':visible') ? $tbl.data('hideText') : $tbl.data('showText')
+              let newText = $tbl.is(':visible') ? $tbl.data('showText') : $tbl.data('hideText')
+              $(this).html($(this).html().replace(new RegExp(oldText), newText))
+              $tbl.toggle()
+              return false;
+            })
+          });
+        </script>
+        <meta charset="utf-8">
+        <title>Expostats - Outils statistiques pour l'interprétation des données d'hygiène</title>
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="">
+            <meta name="author" content="http://bootstraptaste.com">
+            <!-- css -->
+            <link rel="icon" href="favicon.ico" />
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+            <link href="css/jcarousel.css" rel="stylesheet">
+            <link href="css/flexslider.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+            <!-- Theme skin -->
+            <link href="skins/default.css" rel="stylesheet">
+            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+    </head>
+    
+    <body>
+      <div id="wrapper">
+        <!-- start header -->
+        <div id='header' class='header'>
+          <div class="navbar navbar-default navbar-static-top">
+            <div class="container-front">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand" >
+                  <a href="index.html"><img class='logo fr' src='img/logo1-fr.png' /></a>
+                  <h5><span>Outils statistiques </span>pour l'interprétation des données d'hygiène</h5>
+                </div>
+              </div>
+              <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                  <li><a href="index.html">Accueil</a></li>
+                  <li class="active"><a href="outils.html">Outils d'interprétation</a></li>
+                  <li><a href="webexpofr.html">Projet Webexpo</a></li>
+                  <li><a href="autresoutils.html">Autres Outils</a></li>
+                  <li><a href="autresoutils.html">Liens</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="en/tools.html"><img src="img/en.png"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+	</div> <!-- end header -->
+        <div class='content'>
+          <section id="inner-headline">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+                    <li class="active">Les outils</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+	<section id="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 xx">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Tool1" aria-expanded="false" aria-controls="Tool1">
+                          Tool1 : Estimation des paramètres de la distribution lognormale et comparaison à une valeur limite d'exposition
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="Tool1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+     <p>
+			
+    <a href="https://lavoue.shinyapps.io/Tool1v3Fr/" target="_blank">Tool 1</a>
+			(<a class='enforce-https' href="/shiny/outils/tool1fr" target="_blank">Lien alternatif</a>)
+<br>
+<a href="https://lavoue.shinyapps.io/Tool1Expv3Fr/"  target="_blank">Tool 1, version simplifiée</a> (<a class='enforce-https' href="/shiny/outils/tool1expfr/" target="_blank" >Lien alternatif</a>)
+</p>
+			<p>
+			Cet outil permet d'interpréter un jeu de données d'exposition (incluant des valeurs non-détectées) en regard d'une valeur limite d'exposition. En plus de presenter de nombreux graphiques d'illustration, il traite 5 aspects différents:   
+			</p>
+
+			<ul>
+			<li>Adéquation au modèle lognormal (évaluation graphique)</li>
+			<li>Statistiques descriptives</li>
+			<li>Analyse de risque selon le critère : Fraction de dépassement de la valeur limite</li>
+			<li>Analyse de risque selon le critère : Comparaison du 95ième percentile avec la valeur limite</li>
+      <li>Analyse de risque selon le critère : Comparaison de la moyenne arithmétique avec la valeur limite</li>
+			</ul>
+			
+			<p>
+			Les calculs sont effectués par un modèle bayésien et un moteur de simulation de chaines de Markov. Ils reposent sur l'hypothèse d'une distribution lognormale des expositions.
+			</p>
+</div>
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Tool2" aria-expanded="false" aria-controls="Tool2">
+          Tool2 : Analyse des variations inter et intra-travailleur
+        </a>
+      </h4>
+    </div>
+    <div id="Tool2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+        <p>
+
+	 <a href="https://lavoue.shinyapps.io/Tool2v3Fr/" target="_blank">Tool 2</a> (<a class='enforce-https' href="/shiny/outils/tool2fr" target="_blank">Lien alternatif</a>)
+	</p>
+	<p>
+			Cet outil interprète un jeux de données contenant un identifiant des travailleurs, et pour lequel certains travailleurs sont associés à plusieurs mesures répétées. Il évalue dans quelle mesure les variations entre les travailleurs sont d'ampleur suffisante pour nécessiter une analyse individuelle. Les metriques suivantes sont estimées:
+	</p>
+	<ul>
+			<li>Risque du groupe basé sur la fraction de dépassement, le 95ième percentile, la moyenne arithmétique. </li>
+			<li>Probabilité qu'un travailleur au hasard soit surexposé (plusieurs indices).</li>
+			<li>Differences entre les travailleurs (plusieurs indices). </li>
+			<li>Analyse de risque pour des travailleurs individuels, basée sur la fraction de dépassement, le 95ième percentile, la moyenne arithmétique.</li>
+	</ul>
+		
+	<p>
+				Les calculs sont effectués par un modèle hierarchique bayésien et un moteur de simulation de chaines de Markov. Ils reposent sur l'hypothèse d'une distribution lognormale des expositions.
+ 	</p>
+      
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFive">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Tool3" aria-expanded="false" aria-controls="Tool3">
+          Tool3 : Évaluation de l'effet d'une variable de catégorie : déterminants de l'exposition
+        </a>
+      </h4>
+    </div>
+    <div id="Tool3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+		<p>
+
+			<a href="https://lavoue.shinyapps.io/Tool3v3Fr/" target="_blank">Tool 3</a> (<a class='enforce-https' href="/shiny/outils/tool3fr" target="_blank">Lien alternatif</a>)
+			</p>
+
+			
+			<p>
+			
+      Cet outil compare les distribution sous-jacentes à plusieurs catégories d'une variable d'intérêt (p.ex. présence ou absence de ventilation, saison de mesure). Les données sont saisies sous la forme d'un fichier EXCEL contenant une colonne de valeurs d'exposition, et d'autres colonnes contenant les valeurs des variables d'intérêt. Les calculs suivants, accompagnés de graphiques illustratifs, sont effectués:</p>
+
+			<ul>
+			<li>Risque du groupe basé sur la fraction de dépassement, le 95ième percentile, la moyenne arithmétique.  </li>
+			<li>Risque pour une catégorie individuelle basé sur la fraction de dépassement, le 95ième percentile, la moyenne arithmétique. </li>
+			<li>Comparaison de deux catégories sélectionnées (p.ex. avant/après une intervention)</li>
+				<ul>
+				<li>Différence pour la moyenne géométrique</li>
+				<li>Différence pour l'écart-type géométrique</li>
+				<li>Différence de risque (selon la fraction de dépassement, le 95ième percentile, la moyenne arithmétique)</li>
+				<li>Probabilité qu'une différence d'ampleur pré-spécifiée existe</li>
+				</ul>
+			</ul>
+			
+			<p>
+				Les calculs sont effectués par un modèle bayésien et un moteur de simulation de chaines de Markov. Ils reposent sur l'hypothèse d'une distribution lognormale des expositions.
+ 			</p>
+
+</ol>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Multi" aria-expanded="false" aria-controls="Multi">
+		Multi-Outils (Hors-ligne)
+        </a>
+      </h4>
+    </div>
+    <div id="Multi" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+        <p>
+			<span class='update-highlight'>&#x25B8; MISE À JOUR DÉCEMBRE 2018 &#x25C2;</span><br>
+      	<p>
+		<span style='color:red'>Exclusivité Windows</span>&nbsp;&nbsp;
+		Téléchargez l'ensemble des outils sous forme intégrée pour exécution hors-ligne&nbsp;&rarr;
+		<!--<ol style=''>
+		<li><a href="http://expostats.ca/site/www/ExpostatsTools_fr.exe" target="_blank">Télécharger</a> l'exécutable autoextractible (~320Mo)</li>
+		<li>Lancer l'exécutable et suivre les instructions pour installer les outils sur votre poste</li>
+		<li>Double-cliquer sur l'icône «ExpostatsTools» (ajoutée lors de l'étape 2 et située sur votre bureau Windows) pour ouvrir les outils dans votre navigateur (chacun dans son propre onglet)</li>
+		<li>Pour terminer, cliquer sur le bouton «Quitter» et fermer les onglets</li>
+
+		</ol>-->
+                <a href="instructions-hl.html">Page de téléchargement</a>
+	</p>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+              <div class="col-lg-2 lien-article">
+                <fieldset>
+                  <legend>
+                    Fondements
+                  </legend>
+                  <div>
+                    <a target="_blank" href="https://academic.oup.com/annweh/article/63/3/267/5248301" title="Oxford Academic article">En savoir plus sur les fondements scientifiques d'Expostats (article en anglais)</a>
+                    <i class="extern-link fas fa-external-link-alt"></i>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div>
+            <a href='#' class='toggle-version-history'>
+              <b>Afficher</b> l'historique des versions d'Expostats
+              <i class='fa fa-history'></i>
+            </a>
+              <table class='version-history'  data-show-text='Afficher' data-hide-text='Masquer' data-link-text='Lien' data-version-separator=','>
+                <thead>
+                  <tr>
+                    <th>Version</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Publication référentielle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+          </div>
+          <div class='last-update'>
+            
+            <span class='title'>Date de dernière modification mineure (ex. à l'interface graphique des outils) :</span>
+            <span class='date'><script>
+                var date_mod;
+                
+                $.ajax({
+                  url: 'date_outils.php',
+                  dataType: 'json',
+                  async: false,
+                  success: function(res) {
+                    date_mod = res.date;
+                  },
+                  error: function( jqXHR, textStatus, errorThrown ) {
+                    console.log("DIDN'T WORK :(")
+                  }
+                });
+                document.write(date_mod);
+                            </script></span>
+		</div>
+	</div>
+	</section>
+	</div> <!-- End of content -->
+	 <footer>
+                <div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>&copy; 2015 Expo Stats Tous droits réservés.</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li>Une réalisation de <a href="http://www.librelinux.ca" data-placement="top" title="LibreLinux">Libre Linux </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+            </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

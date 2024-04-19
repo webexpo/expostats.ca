@@ -1,0 +1,700 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>NDExpo</title>
+<style type="text/css">
+ p.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+.auto-style1 {
+	text-indent: -.25in;
+	font-size: 10.0pt;
+	font-family: Calibri, sans-serif;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: 10.0pt;
+}
+.auto-style2 {
+	text-indent: -.25in;
+	line-height: 115%;
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+	margin-left: .5in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: .0001pt;
+}
+.auto-style3 {
+	line-height: 115%;
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+	margin-left: .5in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: .0001pt;
+}
+.auto-style4 {
+	text-indent: -.25in;
+	line-height: 115%;
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+	margin-left: .5in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: 10.0pt;
+}
+.auto-style5 {
+	vertical-align: super;
+}
+.auto-style6 {
+	line-height: 115%;
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: .5in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: 10.0pt;
+}
+.auto-style7 {
+	font-size: 10.0pt;
+	font-family: Calibri, sans-serif;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: .0001pt;
+}
+.auto-style8 {
+	font-size: medium;
+}
+.auto-style9 {
+	line-height: 115%;
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: .5in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: .0001pt;
+}
+.auto-style10 {
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style11 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<p class="MsoNormal" style="font-size: medium">&nbsp;</p>
+<p align="center" class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><u><span lang="EN-CA">NDExpo: treatment 
+of censored data with multiple limits of detection<o:p></o:p></span></u></b></p>
+<p align="center" class="MsoNormal"><b style="mso-bidi-font-weight: normal"><u>
+<span class="auto-style10" lang="EN-CA">Help file</span></u><span lang="EN-CA"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a href="#Introduction">Introduction</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a href="#A_note_on_LODs,_LOQs_and_their_uses_in_NDexpo">A note on LODs, LOQs 
+and their uses in NDexpo</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a href="#Software_Instructions">Software Instructions</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a href="#Limitations_/_troubleshooting">Limitations / troubleshooting</a><o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal">
+<span class="auto-style10" lang="EN-CA">
+<a href="#Basic_principle_of_the_Robust_ROS_approach_">Basic principle of the 
+Robust ROS approach</a></span></b><span lang="EN-CA"> <o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal">
+<span class="auto-style10" lang="EN-CA">
+<a href="#The_case_of_adjacent_limits_of_quantification,_and_the_relationship_of_NDexpo_to_the_NADA_package">
+The case of adjacent limits of quantification, and the relationship of NDexpo to 
+the NADA package</a></span></b><span lang="EN-CA"><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a href="#Potential_inconsistencies_in_the_results">Potential inconsistencies in 
+the results</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a name="Introduction">Introduction</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">NDexpo is a JavaScript Web application that implements the 
+robust ROS (regression on order statistics) censored data treatment approach 
+proposed by Denis Helsel.<span style="mso-spacerun: yes">&nbsp; </span>Details 
+of his approach can be located in his monograph:
+<i style="mso-bidi-font-style: normal">Nondetects and data analysis: Statistics 
+for censored environmental data</i>. Wiley, 2005.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Basically, the user enters their data values, inserting ‘&lt;x’ 
+for each nondetect. The application implements robust ROS and recreates the data 
+set, replacing ‘&lt;x’ values with exposure estimates based on their rank among the 
+set of detected values. The new data set can then be exported for additional 
+uses such as estimating the geometric mean, the proportion of exposures 
+exceeding an exposure limit, or upper tolerance limits.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+&nbsp;</p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a name="A_note_on_LODs,_LOQs_and_their_uses_in_NDexpo">A note on LODs, LOQs and 
+their uses in NDexpo</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">In NDexpo, nondetects are entered as ‘&lt;x’ by the user. The 
+value x should be the limit of quantification (LOQ) for the sample, expressed in 
+concentration in the workplace (e.g. ppm).<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">There is a clear distinction between limit of detection (LOD) 
+and limit of quantification. In brief, the limit of detection (LOD) is a 
+statistical construct aimed at being very sure ‘there was something’. It is 
+usually defined as the product of the variability of blank results by a 
+predetermined factor (typically around 3). The limit of quantification is the 
+limit above which labs feel confident about the numbers they provide. <o:p></o:p>
+</span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">In theory, it is important to distinguish between data 
+reported as not detected compared to data reported as detected but not 
+quantified. However, to our knowledge very few, if any approach exist to 
+distinguish between ‘&lt;LOD’ and ‘detected but &lt;LOQ’ samples when analysing 
+datasets containing such samples (see section 6.3.4 of the 2012 edition of 
+Helsel's monograph for an exception). Furthermore, labs typically only report 
+results as detected (they report a number) or &lt;LOQ. Consequently, in practice, 
+what we call censored data in occupational hygiene is most often 'not 
+quantified' data rather than 'not detected' data. We will therefore use only the 
+LOQ in the rest of this document. <o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Many laboratories report the LOQ (or LOD) in mass (e.g. &lt;5ng 
+on the filter). It is important to note that censored data in NDexpo has to be 
+expressed in concentration unit, therefore, LOQs reported in mass have to be 
+combined with sampling volume before entering them in NDexpo in units of 
+concentration on the workplace atmosphere.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a name="Software_Instructions">Software Instructions</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Data can be entered in 2 ways: 1) individually in the ‘Raw 
+data’ column (after the value is entered, one presses ‘Add row’ or ENTER); 2) by 
+copy-pasting a column of values from EXCEL in the ‘import’ tab, then clicking on 
+the ‘import’ button. In both cases the status of nondetect is expressed by using 
+the ‘&lt;’ sign (e.g. ‘&lt;10’).<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span style="mso-bidi-font-weight: normal"><u><span lang="EN-CA">Preparing data<o:p></o:p></span></u></span></p>
+<p class="auto-style1" style="mso-list: l4 level1 lfo3"><![if !supportLists]>
+<span lang="EN-CA" style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style10" lang="EN-CA" style="mso-bidi-font-size: 10.0pt">Open 
+your spreadsheet <o:p></o:p></span></p>
+<p class="auto-style1" style="mso-list: l4 level1 lfo3"><![if !supportLists]>
+<span lang="EN-CA" style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style10" lang="EN-CA" style="mso-bidi-font-size: 10.0pt">
+Calculate the limit of quantification for each nondetect measurement in unit of 
+concentration in the workplace.<o:p></o:p></span></p>
+<p class="auto-style1" style="mso-list: l4 level1 lfo3"><![if !supportLists]>
+<span lang="EN-CA" style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style10" lang="EN-CA" style="mso-bidi-font-size: 10.0pt">In 
+your database add a ‘&lt;’ sign in front of your calculated limit of quantification 
+for each measurement (e.g. ‘&lt;2’).<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span style="mso-bidi-font-weight: normal"><u><span lang="EN-CA">Enter data</span></u></span><span lang="EN-CA"><span style="mso-spacerun: yes">&nbsp;
+</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Data can be entered two ways:<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-list: l1 level1 lfo1"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">1.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Imputing 
+data by hand.<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Click on 
+empty box under raw data heading.<span style="mso-spacerun: yes">&nbsp; </span><o:p></o:p>
+</span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Enter a 
+prepared data value and press enter; a new empty row will appear.<span style="mso-spacerun: yes">&nbsp;
+</span><o:p></o:p></span></p>
+<p class="auto-style9" style="mso-add-space: auto"><span lang="EN-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="auto-style2" style="mso-list: l1 level1 lfo1"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">2.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Copying 
+data from a spreadsheet program. <o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Select 
+the desired data values from your spreadsheet program and copy data (Note: you 
+can copy over only one column of data at a time).<span style="mso-spacerun: yes">&nbsp;
+</span><o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Click on 
+the import tab and paste the values by either: using CTL- v key functions, or 
+right clicking your mouse in the import area and select paste.<span style="mso-spacerun: yes">&nbsp;
+</span><o:p></o:p></span></p>
+<p class="auto-style4" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Once data 
+is in import area, click on the ‘Import’ button below your data.<span style="mso-spacerun: yes">&nbsp;
+</span>Your data will appear in the main table.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Note: Any value entered in improper format will be 
+highlighted in yellow<o:p></o:p></span></p>
+<p class="MsoNormal"><u><span class="auto-style10" lang="EN-CA">Calculate new 
+data base</span></u><span lang="EN-CA">:<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Once data 
+has been imported into the program (on left side of screen in the main table) 
+click on the ‘Calculate’ button.<o:p></o:p></span></p>
+<p class="auto-style4" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">If there 
+are no errors the program will calculate estimates for the nondetects and 
+display the results in the main table.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<u><span lang="EN-CA">Extract/export data</span></u><b style="mso-bidi-font-weight: normal"><span lang="EN-CA">.<span style="mso-spacerun: yes">&nbsp;
+</span></span></b><span lang="EN-CA">The program will display and produce three 
+types of results including:<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-list: l3 level1 lfo4"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">1.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Export 
+(Final only)<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Click on 
+the ‘Export (final only)’ tab.<span style="mso-spacerun: yes">&nbsp; </span>This 
+contains the detected and estimated values calculated by the program.<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l2 level1 lfo2"><![if !supportLists]>
+<span lang="EN-CA" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol">
+<span style="mso-list: Ignore">·<span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">To 
+export: Click inside the text area where the exported data is displayed, select 
+all the data (CTL-A or right click and ‘Select all’), copy the data into the 
+clipboard ( CTL-C or right click ‘Copy’ ).The data can be imported/pasted into 
+any spreadsheet or word processing program using the CTL-v/mouse functions.<o:p></o:p></span></p>
+<p class="auto-style3" style="mso-add-space: auto"><span lang="EN-CA">
+<span class="auto-style10">As an example, the ‘final only’ export tab can be 
+copy-pasted directly in IHSTAT</span><a href="#_ftn1" name="_ftnref1" style="mso-footnote-id: ftn1" title=""><span class="auto-style5"><span style="mso-special-character: footnote"><![if !supportFootnotes]><span class="auto-style10" lang="EN-CA" style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">[1]</span><![endif]></span></span></a><span class="auto-style10"> 
+where a variety of lognormal parameters are estimated along with confidence 
+intervals.</span><o:p></o:p></span></p>
+<p class="auto-style9" style="mso-add-space: auto"><span lang="EN-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="auto-style2" style="mso-list: l3 level1 lfo4"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">2.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">Export 
+(Verbose) <o:p></o:p></span></p>
+<p class="auto-style6"><span lang="EN-CA">Click on the Export (verbose). This 
+contains four columns of data including:<span style="mso-spacerun: yes">&nbsp;
+</span>raw data ('raw'), plotting positions ('pp', see below), normal scores 
+('ns', value of the standard normal distribution corresponding to the plotting 
+position), and final values ('final'). <o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">The export tabs contain text in tsv format: tab separated 
+values. This implies that when copy/pasting their content (as for the previous 
+case) in EXCEL, the data should appear in separate columns in most cases but 
+exceptions could occur depending on the browser or the spreadsheet settings . Imputed values 
+(i.e. nondetects) and calculated numbers are reported with high precision (i.e. 
+has a lot of digits) in the export tab in order be transferred into other 
+software. On the other hand, the precision of data points entered manually 
+remains as entered by the user. This is why the appearance of data in these tabs 
+might seem inconsistent and difficult to read at times; they are really meant to 
+be exported and displayed elsewhere (e.g. EXCEL).<o:p></o:p></span></p>
+<p class="auto-style9"><span lang="EN-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="auto-style4" style="mso-list: l3 level1 lfo4"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">3.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style11">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><span class="auto-style8">
+Quantile-Quantile plot (Q-Q plot).<span style="mso-spacerun: yes">&nbsp; </span>
+</span></span></span><span lang="EN-CA"><span class="auto-style11">
+<span class="auto-style8">A Q-Q plot allows visual assessment of the goodness of 
+fit of the detected data to a lognormal distribution. It identifies the 
+estimated/imputed nondetects (brown circles) from the detected values (red x’s), 
+and provides the actual concentration value of individual points.<span style="mso-spacerun: yes">&nbsp;
+</span>To see individual concentration values, hover over the points on the 
+graph.<span style="mso-spacerun: yes">&nbsp; </span>Concentrations will be 
+displayed below the graph. We voluntarily did not include a formal goodness of 
+fit test, such as Shapiro-Francia, because these tests tend to be overly severe 
+for large samples (any slight deviation will cause rejection of null hypothesis 
+of log-normality) and overly lenient (null hypothesis never rejected) for small 
+samples. Our main assumption is that there is ample previous evidence that 
+workplace exposures are lognormal, the graph will nevertheless permit to 
+identify gross deviations and outliers.</span></span><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<u><span lang="EN-CA">Adding / replacing values<o:p></o:p></span></u></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">It is possible to add or eliminate one value and re-do the 
+calculations, which will generate a new final table. Simply fill the empty cell 
+below the last value and press ENTER to add a value. To eliminate a value, erase 
+its content, then click on ‘Remove empty rows’. Re-generate results by clicking 
+on ‘Calculate’.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">
+<a name="Limitations_/_troubleshooting">Limitations / troubleshooting</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">There are some restrictions to the application: <o:p></o:p>
+</span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l0 level1 lfo5"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">1.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">A minimum 
+of 5 measurements is required.<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l0 level1 lfo5"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">2.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">A minimum 
+of 3 detected measurements is required<o:p></o:p></span></p>
+<p class="auto-style2" style="mso-add-space: auto; mso-list: l0 level1 lfo5"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">3.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">At least 
+20% of measurements must be detected values. <o:p></o:p></span></p>
+<p class="auto-style4" style="mso-add-space: auto; mso-list: l0 level1 lfo5"><![if !supportLists]>
+<span lang="EN-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin">
+<span style="mso-list: Ignore"><span class="auto-style10">4.</span><span class="auto-style10" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class="auto-style10" lang="EN-CA">
+Nondetects values must be less than the greatest detected value<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA"><span class="auto-style8" style="mso-spacerun: yes">&nbsp;</span><span class="auto-style8">If 
+any of the previous condition (i.e. 1-4) is not met, an error message is given 
+to the effect that calculation is impossible.</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">There is no limit to the number of values entered in NDexpo. 
+Hence the ROS approach can theoretically be applied to any number of 
+measurements. However, we expect that above 200 measurements (depending on the 
+user’s computer specifications), delays in the calculations might start to 
+appear.<o:p></o:p></span></p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">
+<o:p></o:p></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><a name="Basic_principle_of_the_Robust_ROS_approach_">
+<b style="mso-bidi-font-weight: normal"><span class="auto-style10" lang="EN-CA">
+Basic principle of the Robust ROS approach</span></b><span lang="EN-CA"> </span>
+</a> <o:p></o:p></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Robust ROS stands for robust regression on order statistics, 
+and is described in detail in section 6.4 of the second edition of Helsel's 
+monograph. <o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<u><span lang="EN-CA">Principle of a Q-Q plot<o:p></o:p></span></u></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">The basic principle behind robust ROS is the same as that of 
+a quantile-quantile plot (also available in NDexpo). The idea is to compare the 
+observed values to the values we would have observed if the sample came from a 
+known distribution. With the normal distribution, we compare the observed data 
+with data from a normal distribution with the same standard deviation and mean. <o:p></o:p>
+</span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">The tricky part is to determine which value of the assumed 
+normal distribution each point should be compared to.<span style="mso-spacerun: yes">&nbsp;
+</span>For example, assume we have five observations that range from 93 to 108, 
+with a mean of 100 and a standard deviation of 5.<span style="mso-spacerun: yes">&nbsp;
+</span>To what value of the corresponding normal distribution should I compare 
+the minimum of my sample?<span style="mso-spacerun: yes">&nbsp; </span>This has 
+to be repeated for all five observations. To address this we calculate ‘plotting 
+positions’.<span style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Plotting positions could be seen as the expected cumulative 
+probability corresponding to each observation after they have been ordered. For 
+example the minimum of 5 observations of a normal distribution would be expected 
+to correspond to a cumulative probability of 12% (i.e. 12% of the values in this 
+distribution are smaller than the value, and 88% greater). This probability 
+corresponds to -1.17 in the standard normal distribution (i.e. -1.17 is the 
+normal score corresponding to the cumulative probability 12%). It follows that 
+for a normal distribution of mean 100 and standard deviation 5, a cumulative 
+probability of 12% would correspond to 94 (100-5*1.17). There we go! We have a 
+value to compare to our minimum of 93 ! <o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">In order to complete the Q-Q plot, we have to estimate a 
+plotting position for each value of our sample, then calculate the corresponding 
+normal score and the value in the assumed distribution. A Q-Q plot is simply a 
+plot of the observed vs. expected values.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+<span lang="EN-CA">Historically, it has also been popular to calculate the best 
+regression line directly between the observations and their normal scores (this 
+is the type of Q-Q plot displayed in NDexpo). The goodness of fit indicates 
+whether the normal model is plausible, and the slope and intercept provide 
+estimates of the mean and standard deviation. <o:p></o:p></span></p>
+<div style="mso-element: footnote-list">
+	<p class="MsoNormal" style="font-size: medium; font-family: Arial, Helvetica, sans-serif">
+	<span lang="EN-CA">There are several formulas used to calculate the plotting 
+	positions for ranked observations. They usually depend on the assumed 
+	distribution. We have used Blom's formula in our example
+	<span style="mso-no-proof: yes">(Royston, 1993)</span>. Figure&nbsp;1 illustrates 
+	the process of making a Q-Q plot.<o:p></o:p></span></p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal" style="font-size: medium">
+	<o:p>
+	<img alt="" src=./figures/FIG1EN.jpg  /></o:p></p>
+	<p class="MsoNormal">&nbsp;</p>
+	<p class="MsoNormal"><span style="mso-spacerun:yes">&nbsp;</span><u><span class="auto-style10" lang="EN-CA">From 
+	the Q-Q plot to Robust ROS<o:p></o:p></span></u></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">The principle of robust ROS is really simple once the 
+	principle of the Q-Q plot is secured (see figure 2). The first step is to 
+	order the observations. Nondetects are inserted among the detected values 
+	depending on the value of the corresponding LOQ (i.e. the x in ‘&lt;x’). Then, 
+	plotting positions are estimated for each observation, and normal scores are 
+	calculated. As shown between step 1 and 2 in figure 2, there is a 
+	re-ordering that occurs after the plotting positions have been calculated. 
+	The next step is to perform the regression of detected values on their 
+	normal scores. Based on the obtained regression line, a new value is 
+	predicted for each nondetect based on its plotting position. The procedure 
+	therefore yields a modified dataset, containing the initial detected 
+	observations as well as new values replacing the nondetects. The process is 
+	illustrated in figure 2. <o:p></o:p></span></p>
+	<p class="MsoNormal">&nbsp;</p>
+	<p class="MsoNormal">
+	<o:p>
+	<img alt="" src=./figures/FIG2EN.jpg  /></o:p></p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">The new dataset can then be processed just as any 
+	dataset, allowing it to be used for any statistical procedure (goodness of 
+	fit test, estimation of percentiles, confidence intervals, etc.) with no 
+	censored data.<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>It is 
+	important to note that the individual imputed values have no meaning, they 
+	can only be interpreted within the full dataset. It is especially apparent 
+	when there are several data points with the same LOQ; the procedure will 
+	yield different imputed values, and there is no way to know which value 
+	should be attributed to each point below this LOQ.<o:p></o:p></span></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">The main challenge in applying robust ROS lies in the 
+	estimation of plotting positions from the ordered observations. This is 
+	especially true when there are multiple censoring points. In his monograph, 
+	Dennis Helsel summarized the papers that proposed how to perform this 
+	estimation (he was co-author in several of them), and described the 
+	resulting recommendation, which was implemented in several statistical 
+	software programs including R and Minitab, and now in NDexpo.<o:p></o:p></span></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<u><span lang="EN-CA">Robust ROS for lognormal data<o:p></o:p></span></u></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">In order to simplify the previous explanation, we have 
+	used the normal distribution to illustrate the procedure. Of course, there 
+	is now ample evidence that occupational exposures tend to follow the 
+	lognormal model. The assumption of lognormality is embedded in NDexpo; after 
+	the user has entered the data the application transforms them by calculating 
+	the natural logarithm of each value, implements the full ROS procedure as 
+	described above, and finally back-transforms the imputed values for the 
+	nondetects. It is important to note that the user wishing to use the 
+	provided normal scores (in the verbose output) to calculate a regression 
+	line manually, would have to take the natural logarithm of the observations 
+	first.<o:p></o:p></span></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	&nbsp;</p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	&nbsp;</p>
+	<p class="MsoNormal"><b style="mso-bidi-font-weight:normal">
+	<span class="auto-style10" lang="EN-CA">
+	<a name="The_case_of_adjacent_limits_of_quantification,_and_the_relationship_of_NDexpo_to_the_NADA_package">
+	The case of adjacent limits of quantification, and the relationship of 
+	NDexpo to the NADA package</a></span></b><span lang="EN-CA"><o:p></o:p></span></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<u><span lang="EN-CA">Introduction<o:p></o:p></span></u></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">NDexpo was initially designed to reproduce exactly the 
+	procedure described in Helsel's monograph. The earliest computerized 
+	implementation of this approach was an add-on for the statistical package R 
+	called NADA. Since the second edition of the book, it is also implemented in 
+	the statistical package MINITAB. We used extensively the NADA add-on in R to 
+	test our code and make sure we got the same results. <o:p></o:p></span></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">There is one set of circumstances however, for which we 
+	came to disagree with what we'll refer to as the NADA procedure. Although 
+	the imputed value from NDexpo will differ from those from NADA in these 
+	circumstances, we expect the impact on the estimation of parameters and 
+	statistical procedure should be minimal: the regression line from which the 
+	nondetects are imputed is not affected, only their position on the line 
+	(plotting positions). To cater for users that might not be convinced by our 
+	reasoning (see below), a button on the main NDexpo page permits to switch to 
+	what we called the 'NADA&nbsp;mode’. In this mode, the calculations made by 
+	NDexpo are identical to the NADA procedure as implemented in R. We intend in 
+	the near future to perform simulations to evaluate the actual impact of our 
+	modification and assess whether it has any clear advantage or drawback. <o:p></o:p>
+	</span></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<u><span lang="EN-CA">The proposed modification<o:p></o:p></span></u></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">The issue arises when more than one censored value with 
+	different LOQs end up adjacent after the data are ordered (see example in 
+	figure 3). As can be seen in figure 3, we have two groups of nondetects, 3 
+	points censored at 1.5, and 3 points censored at 1. Because of the adjacency 
+	of the 2 groups (i.e. there are no detected values between the two LOQs), 
+	the estimation of their plotting positions is such that for both groups, the 
+	'probability space' between the LOQ and 0 is divided in the same way. This 
+	leads to the plotting positions in the 'NADA' column of figure 3, where 
+	there are 3 pairs of equal values, which would translate into 3 pairs of 
+	equal imputed values. We believe this is counter intuitive. In that case we 
+	believe there should be 6 different plotting positions, and the 6 
+	observations should be considered as a single group of censored data (see 
+	figure 4): the 'probability space' between the LOQ and 0 should be divided 
+	by 6 once instead of being divided twice by three. The fact that there are 2 
+	censoring levels (1.5 and 1) does not come into play because after the data 
+	is ranked, the actual LOQ values are not used anymore. In our opinion this 
+	represents an additional justification for lumping the 2 groups of data. One 
+	way to obtain this result in NADA is to replace the 3 points &lt;1.5 and 3 
+	points &lt;1 by 6 points either &lt;1 or &lt;1.5. Of course, at the individual level, 
+	&lt;1 implies something different from &lt;1.5. However, within the robust ROS 
+	procedure in the situation that there are no detected value between 1.5 and 
+	1, either value can be used as the new ‘group LOQ': it has no impact 
+	whatsoever. This trick is precisely what NDexpo does whenever a situation of 
+	adjacent LOQs is detected. After having ordered the data, a new dataset is 
+	created where all adjacent LOQs are set at the same value (we chose the 
+	highest, but underline that it has no bearing on the results), and the NADA 
+	procedure is applied to this new dataset. This is all blind to the user. <o:p></o:p>
+	</span></p>
+	<p class="MsoNormal"><span class="auto-style10" lang="EN-CA">The situation 
+	appears more acute if we imagine a set of 10 censored values, with the same 
+	analytical LOQ in mass, but slightly different but adjacent LOQs in 
+	concentrations because of slightly variable sampling volumes.<span style="mso-spacerun:yes">&nbsp;
+	</span>In this scenario the NADA procedure would end up with 10 equal 
+	plotting positions, and therefore the same imputed value for the 10 
+	censoring points.</span><span lang="EN-CA" style="mso-fareast-language:EN-CA;mso-no-proof:yes"> <o:p></o:p>
+	</span></p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p>
+	<img alt="" src=./figures/FIG3EN.jpg  /></o:p></p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">In the case where the adjacent groups of censored points 
+	have different sizes (e.g. 3 points &lt;1.0 and 6 points &lt;1.5), the issue is 
+	more difficult to detect because the plotting positions would not end up 
+	equal; the 'probability space' would be divided by 3, and then by 6 to 
+	calculate them. However we still believe it would be better divided by 9. <o:p></o:p>
+	</span></p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p>
+	<img alt="" src=./figures/FIG4EN.jpg  /></o:p></p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<span lang="EN-CA">We presented acute examples in order to justify our 
+	approach. However, we do not believe the circumstances of adjacent LOQs will 
+	occur very frequently and therefore believe our results would identical to 
+	the NADA procedure in many situations. Furthermore, as stated earlier, the 
+	impact on parameter estimates should be small.<o:p></o:p></span></p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	&nbsp;</p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	&nbsp;</p>
+	<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+	<b style="mso-bidi-font-weight:normal"><span lang="EN-CA">
+	<a name="Potential_inconsistencies_in_the_results">Potential inconsistencies 
+	in the results</a><o:p></o:p></span></b></p>
+	<span class="auto-style10" lang="EN-CA" style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+	It is likely that at some point the user might face a situation where the 
+	imputed value for a censored point ends up greater than the entered LOQ, 
+	even greater than the next detected value. This situation is related to the 
+	goodness of fit of the data to the assumed distribution (in our case 
+	lognormal). Hence, the procedure will ensure that the plotting positions of 
+	the nondetects are consistent with their rank in the dataset: the plotting 
+	position of a nondetect will always be smaller than that of the next lowest 
+	detected value. Consequently their value in the assumed distribution will 
+	also be consistent. However, if the dataset does not fit the lognormal 
+	distribution well, it is possible that the real value of a detected point 
+	could be low compared to its ‘ideal value’ (i.e. the value corresponding to 
+	its plotting position on the regression line). If the departure from 
+	lognormality is severe enough, the observed value can be lower than the 
+	predicted value for an adjacent nondetect (see figure 5). Therefore, it must 
+	be clear that this kind of observation has no relationship to the accuracy / 
+	performance of the robust ROS procedure, only to the actual fit of the data 
+	to the lognormal dist8ribution. </span>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p>
+	<img alt="" src=./figures/FIG5EN.jpg  /></o:p></p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p></o:p>
+	</p>
+	<p class="MsoNormal">
+	<o:p></o:p></p>
+	<![if !supportFootnotes]><hr align="left" size="1" width="33%" /><![endif]>
+	<div id="ftn1" style="mso-element: footnote">
+		<p class="auto-style7">
+		<a href="#_ftnref1" name="_ftn1" style="mso-footnote-id: ftn1" title="">
+		<span class="auto-style5"><span lang="EN-CA">
+		<span style="mso-special-character: footnote"><![if !supportFootnotes]>
+		<span class="auto-style8" lang="EN-CA" style="line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+		[1]</span><![endif]></span></span></span></a><span lang="EN-CA">
+		<a href="http://sp4m.aiha.org/insideaiha/volunteergroups/EASC/Pages/EASCTopics.aspx">
+		<span class="auto-style8">
+		http://sp4m.aiha.org/insideaiha/volunteergroups/EASC/Pages/EASCTopics.aspx</span></a><o:p></o:p></span></p>
+	</div>
+</div>
+
+</body>
+
+</html>

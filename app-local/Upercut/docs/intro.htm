@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../css/a.css" type="text/css" rel="stylesheet" />
+    <title>UPERCUT : Dermal exposure : introduction</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<body style="width: 80%; margin-left: auto; margin-right: auto">
+    <p class="title">
+        INTRODUCTION TO U<span style="font-variant: small-caps; font-style: italic">percut</span></p>
+    <p class="text">
+        Occupational risk assessment has traditionally been based on estimated airborne
+        concentrations of chemical substances in comparison with occupational exposure limits
+        (OELs). The pulmonary route of exposure has been identified as the main route of
+        exposure in industrial hygiene. Only in the last two decades has the issue of occupational
+        health risk posed by dermal exposure been explored. Given the significant decrease
+        in OELs over the past 50 years and the substitution of several volatile agents by
+        substances that are not or that are scarcely volatile, dermal exposure is expected
+        to play an increasingly significant role in occupational hygiene.</p>
+    <p class="text">
+        While risk assessment strategies for airborne pollutants at the workplace have long
+        been available, cutaneous risk assessment still seems to suffer from a lack of practical
+        tools. In particular, the complexity of the various chemical, physical and physiological
+        processes leading to a chemical reaching a target organ through the skin has prevented
+        the elaboration of exposure limits that would be equivalent to the inhalation occupational
+        exposure limits (OEL).
+    </p>
+    <p class="text">
+        Just as OEL such as the Threshold limit values (TLV) from the American Conference
+        of Governmental Industrial Hygienists (ACGIH) are the bread and butter of day-to-day
+        occupational risk assessment for airborne exposure, Skin notations are currently
+        the main tool available to hygienists and occupational physicians in order to identify
+        potential risks attributable to systemic toxicity following dermal exposure. The
+        criteria used for assigning a notation generally include one or more of the following
+        depending on availability: experimental data on dermal absorption in human or animals,
+        studies reporting toxic effects following skin exposure, in vitro estimates of dermal
+        penetration, acute dermal toxicity data in animals and quantitative structure-activity
+        relationship (QSAR) models, suggesting an elevated skin absorption potential. However,
+        a methodological framework in order to assess health risk associated with dermal
+        exposure still seems to be lacking. The transparency and rigorousness of the skin
+        notation assignment process have thus been recently questioned, and recent studies
+        have shown significant differences when several list of OELs containing skin notations
+        were compared.
+    </p>
+    <p class="text">
+        We developed the U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        tool (‘Utilitaire sur le risque PERCUTané des substances chimiques’) to provide
+        occupational health practitioners with a better portrait of the potential of a substance
+        for cutaneous penetration and systemic toxicity than that given by the yes/no answer
+        from skin notations.
+    </p>
+    <p class="text">
+        The contributions of the U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        tool include:
+    </p>
+    <ul class="intro">
+        <li>Summarizing information relevant for cutaneous exposure from several existing databases</li>
+        <li>Calculating a screening hazard index based on existing QSAR equations that compare
+            the potential systemic dose caused by skin exposure to a dose equivalent to inhalation
+            exposure to a respiratory OEL.</li>
+        <li>Provide a quantitative uncertainty analysis of the hazard index so that final decisions
+            be made taking into account this uncertainty.</li>
+    </ul>
+    <p class="title">
+        BASIC FUNCTIONS OF THE TOOL</p>
+    <p class="text">
+        The user selects a chemical substance either from a dropdown list or using a basic
+        search function based on name or CAS number.
+    </p>
+    <p class="text">
+        Once the chemical is selected, the following information is provided (see <a href="help.pdf">
+            help file</a> for more information):
+    </p>
+    <ul class="intro">
+        <li>CAS number</li>
+        <li>Risk phrases from former European legislation relevant to skin exposure Classification
+            of the substance as carcinogenic, mutagenic or reprotoxic according to European
+            legislation </li>
+        <li>Classification of the substance as carcinogenic, mutagenic or reprotoxic according
+            to European legislation</li>
+        <li>Presence of skin notation on the ACGIH-TLV or german MAK-BAT lists of OELs</li>
+        <li>Intrinsic potential for dermal penetration based on molecular weight and octanol-water
+            partition coefficient</li>
+        <li>Summary of animal oral and dermal toxicity from the RTECS database (see below) translated
+            into the new Globally Harmonized System</li>
+    </ul>
+    <p class="text">
+        The next step is for the user to choose a dermal exposure scenario for the selected
+        substance. This includes surface of the body exposed (selection of body parts exposed),
+        duration of exposure (in min.) and presence/absence of significant simultaneous
+        inhalation exposure.
+    </p>
+    <p class="text">
+        After selection of a scenario, U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        estimates a Dermal Hazard Index (DHR). This quantity represents the ratio of the
+        cutaneous dose to the dose that would be reached if the worker was exposed 8 hours
+        at a respiratory OEL. This estimation is accompanied by an uncertainty analysis
+        based on Monte Carlo simulation, which allows for example to know the probability
+        that the true DHR value would exceed 1 (i.e. cutaneous dose greater than the dose
+        deemed acceptable based on inhalation). See below for a description of how DHR is
+        calculated.
+    </p>
+    <p class="text">
+        Based on the information summarized by U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        and the estimated DHR value and its uncertainty, the user can decide of a course
+        of action, which may include taking no further action regarding potential skin exposure,
+        performing a comprehensive dermal exposure assessment study, conducting a biomonitoring
+        survey, or implementing dermal protection measures.
+    </p>
+    <p class="title">
+        SOURCES OF INFORMATION</p>
+    <p class="text">
+        <span class="subtitle">Selection of chemicals included in the tool: </span>2007
+        list of High production volume (HPV) chemicals from the Organization for economic
+        co-operation and development, and 2010 extraction of the HPV chemicals from the
+        Environmental protection agency (EPA) database. Known corrosive substances were
+        excluded from the final list.
+    </p>
+    <p class="text">
+        <span class="subtitle">Physico-chemical properties: </span>PHYSPROP database from
+        the Syracuse Research Corporation.<br />
+        <a href="http://www.srcinc.com/what-we-do/product.aspx?id=133">http://www.srcinc.com/what-we-do/product.aspx?id=133</a>
+    </p>
+    <p class="text">
+        <span class="subtitle">Animal toxicity data and international OELs: </span>Registry
+        of Toxic Effects of Chemical Substances (RTECS) database initially created by the
+        National Institute for Occupational Safety and Health (NIOSH).
+        <br />
+        <a href="http://www.cdc.gov/niosh/rtecs/default.html">http://www.cdc.gov/niosh/rtecs/default.html</a>
+    </p>
+    <p class="text">
+        <span class="subtitle">Skin notations and OELs: </span>2010 and 2009 lists of, respectively
+        the ACGIH’s Threshold Limit Values (TLVs®) and Biological Exposure Indices (BEIs®)
+        and List of MAK and BAT Values 2010: Maximum Concentrations and Biological Tolerance
+        Values at the Workplace, Report 46 from the Deutsche Forschungsgemeinschaft.
+    </p>
+    <p class="text">
+        <span class="subtitle">Skin penetration:</span><br />
+        QSAR equations were selected from: Vecchia and A. L. Bunge. Skin absorption databases
+        and predictives equations. In: Transdermal drug delivery, edited by R. H. Guy and
+        J. Hadgraft, New York,NY:Marcel Dekker, 2003, p. 57-141. equation T1, table 1, p88-89.<br />
+        Intrinsic potential for dermal penetration was evaluated using Magnusson et al.’s
+        proposition: Magnusson BM, Pugh WJ, Roberts MS. Simple rules defining the potential
+        of compounds for transdermal delivery or toxicity. Pharmaceutical Research. 2004;
+        21(6):1047-1054.
+    </p>
+    <p class="title">
+        DERIVATION OF A DERMAL HAZARD INDEX (DHR)</p>
+    <p class="text">
+        This section provides a brief overview of the calculations used to derive the DHR.
+        The complete and detailed approach used can be found in the <a href="./percut-lavoue-etAl.pdf">
+            scientific report</a> (PDF file).
+    </p>
+    <p class="text">
+        The DHR was calculated using the following general equation:
+    </p>
+    <table style="width: 900px; margin-left: 1em;">
+        <tr>
+            <td style="width: 33%">
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td rowspan="2" style="text-align: right; vertical-align: middle;">
+                            <i>DHR</i>&nbsp;=&nbsp;
+                        </td>
+                        <td style="text-align: center; padding: 0 1em 0 1em;">
+                            <i>cutaneous.dose</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top: 1px solid black; text-align: center; padding: 0 1em 0 1em;">
+                            <i>reference.dose</i>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 33%">
+            </td>
+        </tr>
+    </table>
+    <p class="text">
+        <i>cutaneous.dose</i> refers to a dose in mg of substance expected to cross the
+        skin and enter the blood system. It depends on the duration of exposure, surface
+        of skin exposed, and an estimation of transdermal flux. The first two quantities
+        are selected by the user. The third is estimated from a QSAR equation (see above).
+        This estimation assumes exposure of the chosen surface to an infinite quantity of
+        the substance in a saturated aqueous solution, and that steady state has been reached.
+        The parameters used to estimate the transdermal flux include molecular weight, octanol-water
+        partition coefficient, and water solubility. For gaseous substances, the Henry constant
+        is used to estimate the concentration of an aqueous solution in contact with skin
+        in equilibrium with the vapor concentration set at the OEL.
+    </p>
+    <p class="text">
+        <i>reference.dose</i> refers to an internal dose of the substance deemed safe for
+        the worker. We derived it by assuming 8 hour inhalation exposure at the OEL with
+        a respiratory absorption fraction of 75%.
+    </p>
+    <p class="text">
+        When the DHR is above 1, it means that the dose potentially received through the
+        skin would be equivalent or greater to a dose regarded as safe when received through
+        inhalation repeatedly day after day over an entire career.
+    </p>
+    <p class="text">
+        On the DHR screen, both levels 100% of reference dose (DHR=1) and 10% of reference
+        dose (DHR=0.1) are illustrated. The 10% threshold is shown because it has been mentioned
+        as a criterion for assigning a skin notation to chemicals, and also because we recommend
+        its use when the user indicated that simultaneous inhalation exposure is taking
+        place in addition to skin exposure.
+    </p>
+    <p class="title">
+        ESTIMATING A REFERENCE DOSE FOR THE DHR CALCULATION</p>
+    <p class="text">
+        As presented in the previous section, the derivation of DHR requires the availability
+        of a reference dose. Most approaches from which our tool is inspired used OELs to
+        derive a reference dose. Hence, these values represent an exposure concentrations
+        regarded as safe to breathe by reputable organizations and are based on the integration
+        by expert of all available toxicological data. However, OELs are available for only
+        a fraction of existing chemicals. Moreover many different values of OEL may exist
+        for a single substance depending on the organization, and they sometimes are based
+        on local toxic effect such as irritation, not relevant to systemic toxicity.
+    </p>
+    <p class="text">
+        We developed an OEL database using several sources including the 2010 ACGIH-TLVs,
+        the German 2009 MAK values, and OELs from many countries and organizations reported
+        in the RTECS database. We used this database to maximize the number of chemicals
+        in our tool for which an OEL would be available. We also used it in our calculations
+        to take into account variations in OEL values across organizations for the same
+        chemical.
+    </p>
+    <p class="text">
+        When no OEL was available for a substance, we used correlation analyses between
+        available OELs and animal toxicity data reported in RTECS to estimate a reference
+        dose.
+    </p>
+    <p class="text">
+        The U<span style="font-variant: small-caps; font-style: italic">percut</span> tool
+        issues two different warnings regarding references doses: 1) when the available
+        OEL is known to be based on local toxicity, to the effect that risk is potentially
+        overestimated if systemic effects occur at much higher doses, 2) when the reference
+        dose has been derived using animal toxicity data, to the effect that the DHR estimated
+        is more uncertain.
+    </p>
+    <p class="title">
+        APPROACH FOR THE UNCERTAINTY ANALYSIS</p>
+    <p class="text">
+        As can be seen on the DHR screen, the U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        tool does not only provide one DHR value but rather a distribution of possible values.
+        The text box on the DHR screen provides the probability that the ‘true’ DHR is less
+        than or greater than the chosen threshold (100% or 10%). The uncertainty estimated
+        around each DHR value is substance specific and includes the following parameters:
+    </p>
+    <ul class="intro">
+        <li>Imprecision in octanol-water coefficients</li>
+        <li>Imprecision in water solubility</li>
+        <li>Uncertainty in the QSAR for estimating transdermal flux</li>
+        <li>Variations of OELs across organizations</li>
+        <li>Uncertainty in predicting a reference dose from animal toxicity data</li>
+    </ul>
+    <p class="text">
+        In average, the uncertainty estimated around a DHR value when an OEL was available
+        corresponds to a ratio of the 90th percentile to the 10th percentile of the uncertainty
+        distribution of 200. It means approximately that for a specific chosen scenario,
+        the greatest plausible value of DHR is 200 times greater than the smallest plausible
+        value. For substances for which an OEL was derived from animal toxicity data, the
+        same ratio is 2 000, corresponding to a much greater uncertainty.
+    </p>
+    <p class="title">
+        DISCUSSION</p>
+    <p class="text">
+        The main strength of U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        is that it addresses present hygienists need to find immediate support in the process
+        of decision-making. It is based primarily on the transfer of information from various
+        sources: as such U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        can’t be more 'valid' or 'accurate' than these sources would be individually, but
+        it presents an overall picture of all existing information. Hence, indices such
+        as the risk phrases based on animal toxicity are limited by toxico-dynamics and
+        toxico-kinetic extrapolation to humans and to differences between chronic and acute
+        effects. QSAR models used to estimate the DHR are based on an equation derived from
+        a few hundred substances. In addition to this, the ‘acceptable’ doses are based
+        on actual or estimated occupational exposure limits that were developed for exposure
+        by the inhalation pathway. This includes OELs that may be relevant mainly to respiratory
+        irritation, and the dose associated with such OELs may not pose a similar health
+        risk when received by the dermal route. The exposure scenario used to derive DHR
+        requires exposure to an infinite quantity of a saturated aqueous solution of the
+        contaminant, which is probably rarely effective. Furthermore, U<span style="font-variant: small-caps;
+            font-style: italic">percut</span> does not take into account all of the processes
+        that can affect dermal absorption, such as losses to evaporation or hand-washing,
+        differences in absorption between different areas of the body, metabolisation within
+        the skin, dermal integrity, penetration enhancers, and occlusion. In addition, the
+        tool is designed to assess the risk of systemic health effects following dermal
+        absorption. It does not allow assessment of dermal sensitization. When substances
+        that are dermal sensitizers are selected, a warning message is displayed. A similar
+        warning message is displayed for possible carcinogens and mutagens to advise users
+        that safe levels of exposure may not exist and that minimizing exposure should be
+        a priority. Finally, variations in percutaneous penetration according to the location
+        on the body exposed or on the skin condition (eg. irritated, moisturized, dry ...)
+        were not taken into account. Therefore a series of information that are individually
+        of limited value are presented to identify a potential risk associated with skin
+        chemical exposure. The quantitative uncertainty analysis provided by U<span style="font-variant: small-caps;
+            font-style: italic">percut</span> around the DHR value allows for a transparent
+        decision making process. This project endeavored to transfer existing knowledge
+        in the field of chemical dermal risk analysis to the practical field of occupational
+        hygiene. We insist that U<span style="font-variant: small-caps; font-style: italic">percut</span>
+        is not a risk assessment but a hazard assessment tool: it is not designed to provide
+        a proper evaluation of risk but to indicate the need to perform such an evaluation.
+    </p>
+    <p class="title">
+        CONTACT INFORMATION</p>
+    <p class="text">
+        <b>Jérome Lavoué</b> (Jerome.lavoue@umontreal.ca)<br />
+        - Chercheur / Research scientist.&nbsp;&nbsp;Centre de recherche du CHUM<br />
+        - Professeur agrégé / Associate professor.&nbsp;&nbsp;Université de Montréal
+    </p>
+    <p class="text">
+    </p>
+</body>
+</html>

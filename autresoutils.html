@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+	<script src="js/jquery.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129886253-1"></script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                var dte = new Date();
+                gtag('js', dte);
+                gtag('config', 'UA-129886253-1');
+                console.log("GA", window.location.href.match(/[a-z\.]+$/)[0], dte);
+          });
+        </script>
+        <meta charset="utf-8">
+        <title>Expostats - Outils statistiques pour l'interprétation des données d'hygiène</title>
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="">
+            <meta name="author" content="http://bootstraptaste.com">
+
+            <!-- css -->
+            <link rel="icon" href="favicon.ico" />
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+            <link href="css/jcarousel.css" rel="stylesheet">
+            <link href="css/flexslider.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+            <!-- Theme skin -->
+            <link href="skins/default.css" rel="stylesheet">
+            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+    </head>
+    
+    <body>
+        <div id="wrapper">
+            <!-- start header -->
+            <div id='header' class='header'>
+          <div class="navbar navbar-default navbar-static-top">
+            <div class="container-front">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                  <div class="navbar-brand" >
+                    <a href="index.html"><img class='logo fr' src='img/logo1-fr.png' /></a>
+                    <h5><span>Outils statistiques </span>pour l'interprétation des données d'hygiène</h5>
+                  </div>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="outils.html">Outils d'interprétation</a></li>
+                        <li><a href="webexpofr.html">Projet Webexpo</a></li>
+                        <li class="active"><a href="autresoutils.html">Autres Outils</a></li>
+						<li><a href="liens.html">Liens</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+						<li><a href="en/othertools.html"><img src="img/en.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</div> <!-- end header -->
+        <div class='content'>
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="breadcrumb">
+					<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">Autres Outils</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+			<div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          NDexpo : Outil d'imputation pour les valeurs rapportées sous une limite de quantification
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+	  <h4>	  <a href="./app-local/NDExpo/" target="_blank">Lancer NDexpo</a> </h4>
+	  </br>
+       <p>Plusieurs outils existent pour interpréter un jeu de mesures d’exposition professionnelle, incluant l’estimation de l’exposition moyenne, ou de la probabilité de dépasser une valeur limite. En revanche, presqu’aucun d’entre eux ne permet l’estimation lorsqu’une ou plusieurs mesures sont rapportés comme sous la limite de quantification. En l’absence d’outil accessible, les praticiens ont traditionnellement remplacé les mesures non détectées par LQ/2 ou LQ/√2. Cette approche a été sévèrement critiquée par de nombreux auteurs pour les erreurs qu’elle cause dans l’estimation des paramètres, en particulier de leur incertitude.</p>
+	   <p>L’outil NDexpo représente la mise en œuvre informatisée et accessible sur le Web d’une procédure rigoureuse de traitement des valeurs non détectées proposée par Dennis Helsel dans une monographie dédiée à ce sujet ( Helsel DR. Statistics for Censored Environmental Data Using Minitab and R (CourseSmart). Wiley 2012).</p>
+	   <p>L’approche mise en œuvre par l’application NDexpo est dite ‘méthode de régression sur les statistiques d’ordre’ ou ‘regression on order statistics, Robuts ROS’ dans la monographie de Helsel. Les performances de cette approche apparaissent raisonnables d’après l’auteur en comparaisons d’autres alternatives, et en tout cas bien meilleures que la simple substitution par LQ/2 ou LQ/√2. Son principe repose d’une part sur l’ajustement des valeurs détectées à une distribution lognormale, puis sur la prédiction des valeurs non détectées en fonction de la distribution estimée et de l’agencement des valeurs non détectées dans le jeu de données. Au final, chaque mesure non détectée se voit attribuée une valeur fixe de concentration, qui ne doit absolument pas faire l’objet d’une quelconque interprétation individuelle. Ces valeurs peuvent cependant être utilisées avec les autres mesures du jeu de données dans le calcul de paramètres comme la moyenne, la fraction de dépassement d’une valeur limite, ou par exemple, le 95ième percentile de la distribution.</p>
+		<p>Note 1 : NDexpo peut ne pas fonctionner correctement pour certaines configurations d'Internet Explorer; nous recommandons plutôt Firefox ou Chrome.</p>
+		<p>Note 2 : Il est parfois nécessaire de calculer des valeurs d'exposition sur une journée à partir de plusieurs échantillons partiels. Lorsque certains d'entre eux sont non détectés, il n'est pas évident d'estimer l'exposition moyenne correspondante. La <a href="https://www.webdepot.umontreal.ca/Usagers/lavouej/MonDepotPublic/WEBEXPO/Note%20NDexpo%20EQMs.pdf">note méthodologique</a> suivante définit la problématique et propose une approche, qui est mise en application dans <a href="http://www.expostats.ca/PartSamples_Fr/">l'application suivante.</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          U<span style="font-variant: small-caps; font-style: italic">percut</span> : Utilitaire sur le risque percutané des substances chimiques
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+	  <h4>	  <a href="./app-local/Upercut" target="_blank">Lancer U<span style="font-variant: small-caps; font-style: italic">percut</span></a> </h4><br>
+      
+      <p style="margin-top: 0; margin-bottom: 0;">
+  Il existe peu d’outils à la disposition des intervenants en santé au travail pour évaluer le potentiel de risque posé par la pénétration cutanée des substances chimiques. L’outil U<span style="font-variant: small-caps; font-style: italic">percut</span> proposé ici se veut un outil d’évaluation du danger (préliminaire à une analyse de risque détaillée) qui fournisse un ensemble d’informations pertinentes quant au potentiel d’action toxique après pénétration cutanée d’une substance. Les informations incluses dans U<span style="font-variant: small-caps; font-style: italic">percut</span> pour plus de 1500 substances comprennent :</p>
+<ul style="margin-top: 0; margin-bottom: 0;">
+  <li>Notations relatives à la toxicité systémique transcutanée selon plusieurs systèmes de classification (incluant certaines ‘skin notations’)</li>
+  <li>Potentiel toxique d’après la toxicité animale selon le Système général harmonisé</li>
+  <li>Potentiel intrinsèque de pénétration cutanée<br style="margin-top: 0; margin-bottom: 0;" />
+  </li>
+</ul>
+<p style="margin-top: 0;">  En plus de synthétiser les informations précédentes, l’outil U<span style="font-variant: small-caps; font-style: italic">percut</span> permet à l’utilisateur de sélectionner un scénario d’exposition cutanée (durée d’exposition et surface de peau exposée). U<span style="font-variant: small-caps; font-style: italic">percut</span> effectue alors une comparaison de la dose potentiellement absorbée à travers la peau à une dose interne considérée sans danger. Le calcul comprend une analyse d’incertitude qui permet d’estimer la probabilité que la dose cutanée dépasse une dose  jugée sécuritaire.<br />
+  </p>
+<p>L'outil U<span style="font-variant: small-caps; font-style: italic">percut</span> a été développé suite à une subvention accordée par l'Agence nationale de sécurité sanitaire de l'alimentation, de l' environnement et du travail (ANSES), dans le cadre de son appel 2007 à des projets. Les chercheurs ayant participé à sa conception sont Jérôme Lavoué, professeur sous octroi au Département de santé environnementale et santé au travail de l'Université de Montréal / Chercheur au Centre de recherche du CHUM ainsi que Antoine Milon et David Vernez, chercheurs à L'Institut universitaire romand de santé au travail (IST).</p>
+
+      
+	  </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Distrib : Évaluation de l'ajustement de mesures au modèle lognormal ou normal
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+      <p>
+			<h4><a class='enforce-https' href="/shiny/distrib/fr/" target="_blank">Lancer Distrib</a></h4>
+			</p>
+			
+			<p>
+			Les recommandations actuelles pour l’interprétation des mesures d’exposition s’appuient sur des méthodes statistiques qui supposent que les données proviennent d’une population conforme à la distribution lognormale ou normale.
+			</p>
+			
+			<p>
+			Il apparait donc logique de vérifier que les données sont compatibles avec ces suppositions ; c’est l’objectif principal de l’outil Distrib. 
+			</p>
+			
+			<p>
+			Note : Distrib permet la saisie de valeurs rapportées comme non-détectées ou non-quantifiées. Elles sont traitées au moyen de la procédure NDexpo.
+			</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          CANJEM : Matrice d'exposition antécédente portant sur 258 facteurs de risque
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+      <p>
+			<h4><a href="./app-local/CANJEM/" target="_blank">Lancer CANJEM</a></h4>
+			</p>
+			
+			<p>
+			CANJEM est une matrice emploi-exposition, c.a.d. un outil fournissant une estimation de l’exposition pour une profession et une période temporelle données. CANJEM, actuellement en phase de finalisation, fournit des informations pour 258 agents chimiques et physiques de 1920 à nos jours.
+			</p>
+    </div>
+  </div>
+  </div>
+  
+     <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFive">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          CAPS-Canada
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+      <p>
+			<h4><a href="http://www.caps-canada.ca" target="_blank">Lancer CAPS-Canada</a></h4>
+			</p>
+			
+			<p>CAPS-Canada est un site web visant à faciliter le codage des histoires professionnelles en utilisant des systèmes de classification standard. CAPS-Canada inclut notamment un outil de recherche par mot clé et une interface de transcodage.</p>
+    </div>
+  </div>
+  </div>   
+        
+      </div>
+    </div>
+  </div>
+  </div>
+	</section>
+	</div> <!-- End of content -->
+	 <footer>
+                <div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>&copy; 2015 Expo Stats Tous droits réservés.</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li>Une réalisation de <a href="http://www.librelinux.ca" data-placement="top" title="LibreLinux">Libre Linux </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+            </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

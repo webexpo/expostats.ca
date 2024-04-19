@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>NDExpo</title>
+<style type="text/css">
+ p.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+.auto-style1 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+.auto-style3 {
+	font-size: medium;
+}
+</style>
+</head>
+
+<body>
+
+<p align="center" class="MsoNormal" style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
+<b style="mso-bidi-font-weight: normal"><u>
+<span lang="FR" style="mso-ansi-language: FR">NDExpo&nbsp;: Traitement des valeurs 
+non détectées d’hygiène industrielle<o:p></o:p></span></u></b></p>
+<p align="center" class="MsoNormal" style="text-align: center">
+<b style="mso-bidi-font-weight: normal"><u>
+<span class="auto-style2" lang="FR-CA" style="mso-ansi-language: FR-CA">À propos</span></u></b><b style="mso-bidi-font-weight: normal"><span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Version courante : V1.0 
+(Novembre 2013)<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Introduction<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">NDexp est une application 
+Web qui permet le traitement de jeux de données contenant des valeurs censurées, 
+également qualifiées comme non détectées ou non quantifiées. NDexpo remplace les 
+valeurs censurées par des valeurs numériques selon une approche intitulée 
+‘Robust ROS’. Le jeu de données modifié peut ensuite être traité pour n’importe 
+quelle procédure d’estimation ou de test comme s’il ne contenait que des valeurs 
+détectées. Le fichier d’aide présente les instructions d’utilisation de NDexpo 
+ainsi que des détails sur le principe de l’approche utilisée. <o:p></o:p></span>
+</p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Un peu d’histoire<o:p></o:p></span></b></p>
+<p class="MsoNormal"><span class="auto-style1">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><span class="auto-style3">
+Les données rapportées comme non détectées ou non quantifiées représentent un 
+défi pour de nombreux praticiens depuis des décennies. Ces données ne peuvent 
+être traitées dans les chiffriers comme EXCEL ou autres logiciels utilisés de 
+façon routinière par les hygiénistes du travail. Bien que la plupart d’entre 
+nous sentent bien qu’éliminer des valeurs ou les remplacer par une valeur 
+arbitraire (0 ou la limite de quantification elle-même) ne représente pas une 
+approche idéale, quasiment aucune alternative pratique n’est apparu pour 
+permettre de faire autrement. Un article scientifique de Hornung </span></span>
+<span class="auto-style3"><span lang="FR" style="mso-ansi-language: FR">et Reed, 
+en 1990, a confirmé que de telles pratiques causaient des erreurs dans 
+l’estimation de paramètres </span>
+<span lang="FR" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR; mso-no-proof: yes">
+[1]</span><span lang="FR" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR">. 
+Les auteurs soulignaient cependant que l’utilisation des valeurs de remplacement
+</span><span lang="FR" style="mso-ansi-language: FR">LQ/2 ou LQ/</span><!--[if gte msEquation 12]><m:oMath><m:rad><m:radPr><m:degHide
+    m:val="on" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"/></span></span><span class="auto-style3"><span style="font-family: &quot;Cambria Math&quot;,&quot;serif&quot;; mso-ascii-font-family: &quot;Cambria Math&quot;; mso-hansi-font-family: &quot;Cambria Math&quot;; mso-ansi-language: FR; font-style: italic; mso-bidi-font-style: normal"><m:ctrlPr></m:ctrlPr></span></m:radPr><m:deg></m:deg><m:e></span><i style="mso-bidi-font-style: normal"><span class="auto-style1" lang="FR" style="mso-ansi-language: FR"><span class="auto-style3"><m:r>2</span></m:r></span></i></m:e></m:rad></m:oMath><![endif]--><![if !msEquation]><span lang="EN-CA" style="font-size: 11.0pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; position: relative; top: 4.5pt; mso-text-raise: -4.5pt; mso-ansi-language: EN-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <span class="auto-style2">
+ <v:stroke joinstyle="miter" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="sum @0 1 0" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="sum 0 0 @1" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="prod @2 1 2" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="prod @3 21600 pixelWidth" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="prod @3 21600 pixelHeight" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="sum @0 0 1" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="prod @6 1 2" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="prod @7 21600 pixelWidth" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="sum @8 21600 0" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="prod @7 21600 pixelHeight" xmlns:v="urn:schemas-microsoft-com:vml"/>
+  <v:f eqn="sum @10 21600 0" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <o:lock v:ext="edit" aspectratio="t" xmlns:o="urn:schemas-microsoft-com:office:office"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:13.5pt;
+ height:16.5pt'>
+ <v:imagedata src="file:///C:\Users\Jerome\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png"
+  o:title="" chromakey="white" xmlns:v="urn:schemas-microsoft-com:vml"/>
+</v:shape><![endif]--><![if !vml]>
+<img height="22" src="../../bureau/UdM/Ministuff/Non%20détectés%20Flemay/documentation/clip_image002.png" v:shapes="_x0000_i1025" width="18" /></span><![endif]></span><![endif]><span lang="FR" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR"><span class="auto-style1" style="mso-spacerun: yes"><span class="auto-style3">&nbsp;</span></span><span class="auto-style3"><span class="auto-style1">représentait 
+un moindre mal. Malgré l’existence de méthodes statistiques rigoureuses pour le 
+traitement des données censurées depuis la fin des années 1950, le manque 
+d’outil pratique et simple d’utilisation a fait que la recommandation de Hornung 
+et Reed a représenté l’approche standard de traitement des données censurées 
+durant les 25 dernières années. Depuis les 5 dernières années, un intérêt 
+croissant pour cette problématique s’est manifesté dans la littérature. Ainsi 6 
+articles sur le sujet sont apparus dans la revue de référence en hygiène ‘Annals 
+of occupational hygiene’</span></span></span><span class="auto-style1"><span class="auto-style3"><span lang="FR-CA" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR-CA; mso-no-proof: yes">[2–7]</span></span><span lang="FR-CA" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR-CA"><span class="auto-style3">, 
+incluant un éditorial notable réclamant le développement d’outils pratique écrit 
+par Trevor Ogden, alors rédacteur en chef <span style="mso-no-proof: yes">[8]</span>.<span style="mso-spacerun: yes">&nbsp;
+</span>En 2005, Dennis Helsel a publié ce qui est maintenant considéré comme la 
+bible du traitement des données environnementales censurées
+<span style="mso-no-proof: yes">[9]</span>. Son livre, dont une seconde édition 
+est parue en 2012, propose un traitement très complet de la problématique et 
+présente les approches disponibles et leurs performances. La dernière édition 
+contient des exemples de la mise en œuvre des plusieurs méthodes avec les 
+logiciels de traitement statistique R et MINITAB <span style="mso-no-proof: yes">
+[10]</span>. <span style="mso-spacerun: yes">&nbsp;</span>Il faut souligner 
+l’existence de l’extension au logiciel statistique R nommée NADA, réalisée par 
+Lopeka Lee et Dennis Helsel, qui permet de mettre en œuvre la plupart des 
+approches présentées dans la monographie.</span></span></span><span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Développement de NDexpo<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">NDexpo représente la mise en 
+œuvre en format Web d’une approche présentée dans la monographie de Helsel et 
+disponible dans l’extension NADA qui possède des performances statistiques 
+acceptables dans une grande variété de situations. Cette approche est intitulée 
+Robust ROS (‘</span><span lang="FR-CA" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR-CA">regression 
+on order statistics’</span><span lang="FR-CA" style="mso-ansi-language: FR-CA">), 
+et a aussi été nommée LPR (‘</span><span lang="FR-CA" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR-CA">log 
+probit regression</span><span lang="FR-CA" style="mso-ansi-language: FR-CA">’) 
+par Hewett et Ganser </span>
+<span lang="FR-CA" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR-CA; mso-no-proof: yes">
+[4]</span><span lang="FR-CA" style="mso-ansi-language: FR-CA">. C’est une 
+approche attrayante car elle produit un jeu de données modifié qui peut être 
+traité comme un jeu de données sans valeurs censurée.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Le projet a démarré 
+initialement comme une tentative pour mettre en œuvre l’approche dans EXCEL (ce 
+qui devrait également arriver courant 2014). À l’époque les collaborateurs 
+étaient Daniel Drolet (AIHA exposure assessment committee), Jérôme Lavoué 
+(Université de Montréal) et André Dufresne (Université de Montréal). La version 
+actuelle de NDexpo a été développée conjointement par Jérôme Lavoué et François 
+Lemay, qui a écrit le code javascript. Elle a été financée par les fonds de 
+recherche personnels de Jérôme Lavoué. Nous remercions également Tracy Kirkham 
+pour la révision linguistique de la documentation anglaise.<o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2"><u>
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Note importante&nbsp;:</span></u><span lang="FR-CA" style="mso-ansi-language: FR-CA"> 
+L’algorithme de NDexpo est très proche de l’approche décrite par Helsel, et 
+donnera des résultats identiques à l’extension NADA dans une majorité de 
+circonstances. Cependant, nous avons légèrement modifié la procédure dans le cas 
+où il y a plusieurs limites de quantification qui sont différentes mais 
+adjacentes dans le jeu de données&nbsp;: p.ex. </span>
+<span lang="FR-CA" style="mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: minor-fareast; mso-ansi-language: FR-CA">
+1, 3, &lt;5, &lt;8, 10, 12, mais non 1, 3, &lt;5, 7, &lt;8, 10, 12. Dans ce cas NDexpo 
+donnera des valeurs de remplacement pour les données censurées légèrement 
+différentes de NADA. L’impact de cette modification sur l’estimation devrait 
+être faible mais n’a pas encore été évaluée en profondeur. La justification de 
+cette modification est détaillée dans le fichier d’aide. Nous avons programmé 
+NDexpo afin que l’utilisateur puisse choisir entre notre algorithme et celui de 
+NADA.</span></span><span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">Contact<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Commentaires et suggestions 
+sont les bienvenus. Envoyez les à jerome.lavoue (at) umontreal.ca. Le code 
+javascript peut être obtenu sur demande, nous demandons simplement une référence 
+à nos travaux pour son utilisation.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Liens<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">
+<a href="http://www.dsest.umontreal.ca/bottin/professeurs_chercheurs/jerome_lavoue.html">
+Page de Jérôme Lavoué à l’université de Montréal</a><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Article dans la revue 
+Exposure (Membres de BOHS seulement)<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-CA">Références<o:p></o:p></span></b></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+1 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Hornung R, Reed LD. Estimation of Average Concentration in the Presence 
+of Nondetectable Values. Appl. Occup. Environ. Hyg. 1990;<b>5</b>:46–51.<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+2 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Flynn MR. Analysis of censored exposure data by constrained maximization 
+of the Shapiro-Wilk W statistic. <i>Ann Occup Hyg</i> 2010;<b>54</b>:263–71. 
+doi:10.1093/annhyg/mep083<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+3 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Helsel D. Much Ado About Next to Nothing: Incorporating Nondetects in 
+Science. <i>Ann Occup Hyg</i> 2010;<b>54</b>:257–62. doi:10.1093/annhyg/mep092<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+4 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Hewett P, Ganser G. A comparison of several methods for analyzing 
+censored data. <i>Ann Occup Hyg</i> 2007;<b>51</b>:611–32. 
+doi:10.1093/annhyg/mem045<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+5 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Krishnamoorthy K, Mallick A, Mathew T. Inference for the Lognormal Mean 
+and Quantiles Based on Samples With Left and Right Type I Censoring. <i>
+Technometrics</i> 2011;<b>53</b>:72–83. doi:10.1198/TECH.2010.09189<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+6 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Krishnamoorthy K, Mallick A, Mathew T. Model-based imputation approach 
+for data analysis in the presence of non-detects. <i>Ann Occup Hyg</i> 2009;<b>53</b>:249–63. 
+doi:10.1093/annhyg/men083<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+7 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Krishnamoorthy K, Mathew T, Xu Z. Tests for an Upper Percentile of a 
+Lognormal Distribution Based on Samples with Multiple Detection Limits and 
+Sample-Size Calculation. <i>Ann Occup Hyg</i> 2013;:met037–. 
+doi:10.1093/annhyg/met037<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+8 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Ogden TL. Handling results below the level of detection. <i>Ann Occup Hyg</i> 
+2010;<b>54</b>:255–6. doi:10.1093/annhyg/mep099<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+9 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Helsel D. Non detects and data analysis - Statistics for censored 
+environmental data. Wiley. 2005.<o:p></o:p></span></p>
+<p style="margin-left: 32.0pt; text-indent: -32.0pt">
+<span class="auto-style2" lang="EN-CA" style="mso-bidi-font-size: 12.0pt; mso-no-proof: yes">
+10 <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Helsel DR. <i>Statistics for Censored Environmental Data Using Minitab 
+and R (CourseSmart)</i>. Wiley 2012.. <o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="EN-CA"><o:p>&nbsp;</o:p></span></p>
+
+</body>
+
+</html>

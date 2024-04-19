@@ -1,0 +1,750 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-ca" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>NDExpo</title>
+<style type="text/css">
+ p.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+p.MsoCommentText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+p.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+p.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+p.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+span.MsoFootnoteReference
+	{vertical-align:super;
+}
+p.MsoFootnoteText
+	{margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+}
+.auto-style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+.auto-style2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<p align="center" class="MsoNormal" style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
+<b style="mso-bidi-font-weight: normal"><u>
+<span lang="FR" style="mso-ansi-language: FR">NDExpo&nbsp;: Traitement des valeurs 
+non détectées d’hygiène industrielle<o:p></o:p></span></u></b></p>
+<p align="center" class="MsoNormal" style="text-align: center">
+<b style="mso-bidi-font-weight: normal"><u>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Fichier d’aide</span></u><span lang="FR" style="mso-ansi-language: FR"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><a href="#Introduction">
+Introduction</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">
+<a href="#Note_sur_les_LD,_LQ,_et_leur_utilisation_dans_NDexpo">Note sur les LD, 
+LQ, et leur utilisation dans NDexpo</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><a href="#Instructions">
+Instructions</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">
+<a href="#Restrictions_/_Messages_d’erreur">Restrictions / Messages d’erreur</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">
+<a href="#Principes_de_l’approche_Robust_ROS_">Principes de l’approche Robust 
+ROS</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">
+<a href="#Le_cas_des_limites_que_quantification_adjacentes,_et_la_relation_entre_NDexpo_et_NADA">
+Le cas des limites que quantification adjacentes, et la relation entre NDexpo et 
+NADA</a><o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal">
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">
+<a href="#Incohérence_apparente_de_certains_résultats">Incohérence apparente de 
+certains résultats</a></span></b><span lang="FR" style="mso-ansi-language: FR"><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><a name="Introduction">
+Introduction</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">NDexpo est une application 
+Javascript sur le Web qui met en œuvre une méthode de traitement des valeurs non 
+détectées appelée ‘Robust ROS’ (régression sur les statistiques d’ordre), 
+proposée par Dennis Helsel dans sa monographie intitulée&nbsp;:<i style="mso-bidi-font-style: normal"> 
+Nondetects and data analysis: Statistics for censored environmental data</i>. 
+Wiley, 2005.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">Brièvement, l’utilisateur saisit 
+des données de mesures, en utilisant ‘&lt;x’ pour les données non détectées. 
+L’application met en œuvre l’approche ROS, qui consiste à remplacer les valeurs 
+censurées par des valeurs calculées à partir de leur rang dans le jeu de données 
+et d’une distribution sous-jacente supposée. Le nouveau jeu de données créé peut 
+alors être exporté pour d’autres analyses, par exemple l’estimation de la 
+moyenne, ou de la fraction de dépassement d’une valeur limite.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">
+<a name="Note_sur_les_LD,_LQ,_et_leur_utilisation_dans_NDexpo">Note sur les LD, 
+LQ, et leur utilisation dans NDexpo</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">Dans NDexpo, les valeurs non 
+détectées sont saisies sous la forme ‘&lt;x’. la valeur x devrait être la limite de 
+quantification correspondant à l’échantillon exprimée en unité de concentration 
+dans l’air (p.ex. ppm).<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">Il y a une distinction claire 
+entre limite de détection (LD) et limite de quantification (LQ). En bref, la 
+limite de détection représente un concept statistique qui vise à être certain 
+qu’un agent mesuré était bel et bien présent. Elle est en général calculée en 
+multipliant la variation mesurée dans un groupe d’échantillons témoin par un 
+certain facteur (souvent 3). La limite de quantification est une limite à partir 
+de laquelle le résultat est rapporté avec une certaine fiabilité.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">En théorie il est important de 
+distinguer les valeurs non détectées des valeurs détectées mais non quantifiées. 
+Cependant, à notre connaissance, presque aucune méthode ne permet de prendre en 
+compte cette différence lorsqu’on analyse un jeu de données contenant ces deux 
+types de résultats (voir section 6.3.4 de l’édition 2012 de la monographie de 
+Helsel pour une exception à cette constatation). De plus, les laboratoires 
+rapportent très souvent les mesures censurées comme non quantifiées (&lt;LQ), sans 
+faire la distinction. En pratique, les données d’hygiènes censurées sont donc la 
+plupart du temps rapportées comme sous la limite de quantification. Pour cette 
+raison, seule la limite de quantification est utilisée dans NDexpo.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">De nombreux laboratoires 
+rapportent la limite de quantification pour un échantillon en masse (p.ex. &lt;5ng 
+sur le filtre). Il est important de noter que dans NDexpo, la quantité x dans 
+l’expression ‘&lt;x’, doit être exprimée en unité de concentration. En conséquence, 
+il est nécessaire de combiner une LQ exprimée en masse avec le volume 
+d’échantillonnage pour obtenir une LQ en concentration avant de la saisir dans 
+NDexpo.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><a name="Instructions">
+Instructions</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR" style="mso-ansi-language: FR">Préparation des données<o:p></o:p></span></u></p>
+<p class="MsoCommentText" style="margin-left: .5in; text-indent: -.25in; mso-list: l4 level1 lfo3">
+<![if !supportLists]>
+<span lang="FR" style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-bidi-font-size: 10.0pt; mso-ansi-language: FR">
+Ouvrir le chiffrier (p.ex. EXCEL) <o:p></o:p></span></p>
+<p class="MsoCommentText" style="margin-left: .5in; text-indent: -.25in; mso-list: l4 level1 lfo3">
+<![if !supportLists]>
+<span lang="FR" style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-bidi-font-size: 10.0pt; mso-ansi-language: FR">
+Calculer si nécessaire chaque limite de quantification en unité de concentration 
+dans l’air<o:p></o:p></span></p>
+<p class="MsoCommentText" style="margin-left: .5in; text-indent: -.25in; mso-list: l4 level1 lfo3">
+<![if !supportLists]>
+<span lang="FR" style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-bidi-font-size: 10.0pt; mso-ansi-language: FR">
+Ajouter le signe ‘&lt;’ devant chaque LQ pour les données censurées (p.ex. ‘&lt;2’).<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR" style="mso-ansi-language: FR">Saisie des données</span></u><span lang="FR" style="mso-ansi-language: FR"><span style="mso-spacerun: yes">&nbsp;
+</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">Les données peuvent être saisies 
+de deux façons&nbsp;:<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent: -.25in; mso-list: l0 level1 lfo1">
+<![if !supportLists]>
+<span lang="FR" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR">
+<span style="mso-list: Ignore"><span class="auto-style1">1.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Saisie des 
+données une à une<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Cliquer sur 
+une case vide dans la colonne ‘données brutes’<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Saisir une 
+donnée préparée et presser ENTER&nbsp;: La valeur saisie est interprétée et une 
+nouvelle case vide apparait<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1">
+<![if !supportLists]>
+<span lang="FR" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR">
+<span style="mso-list: Ignore"><span class="auto-style1">2.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Copier des 
+données à partir d’un chiffrier. <o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Sélectionner 
+les données à saisir dans le chiffrier (les données doivent être sous forme 
+d’une colonne) et les copier.<span style="mso-spacerun: yes">&nbsp; </span><o:p></o:p>
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Cliquer sur 
+l’onglet ‘entrée’ et coller les valeurs en utilisant CTRL-v ou ‘coller’ en 
+cliquant droit.<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Une fois les 
+données dans l’aire d’entrée, cliquer sur ‘Importer’&nbsp;: les données apparaissent 
+alors dans le tableau principal<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-left: .5in; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">Note: Toute valeur non valide sera 
+surlignée en jaune<o:p></o:p></span></p>
+<p class="MsoNormal"><u>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Création du 
+nouveau jeu de données</span></u><span lang="FR" style="mso-ansi-language: FR">:<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Une fois les 
+données importées dans l’application (elles apparaissent dans le tableau 
+principal), cliquer sur le bouton ‘Calcul’.<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Si il n’y pas 
+d’erreur, le programme calcule des valeurs de remplacement pour les données 
+censurées<o:p></o:p></span></p>
+<p class="MsoNormal"><u>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Exportation 
+des données: L’application produits 3 types de résultats :</span></u><span lang="FR" style="mso-ansi-language: FR"><o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent: -.25in; mso-list: l3 level1 lfo4">
+<![if !supportLists]>
+<span lang="FR" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR">
+<span style="mso-list: Ignore"><span class="auto-style1">1.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Sortie brève<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Cliquer sur 
+l’onglet ‘Sortie brève’. Cet onglet contient les valeurs détectées et les 
+valeurs de remplacement pour les données censurées.<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; text-indent: -.25in; mso-list: l2 level1 lfo2">
+<![if !supportLists]>
+<span lang="FR" style="font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: FR">
+<span style="mso-list: Ignore">·<span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Pour exporter, 
+cliquer dans l’aire de texte de l’onglet, sélectionner toutes les données<span style="mso-spacerun: yes">&nbsp;
+</span>(CTRL-a ou cliquer droit et ‘sélectionner tout’), copier les données dans 
+le presse-papier (CTRL-c ou cliquer droit et ‘copier’). Les données peuvent être 
+importées (collées) dans un chiffrier (MS EXCEL) ou programme de traitement de 
+texte (MS WORD).<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto">
+<span lang="FR" style="mso-ansi-language: FR"><span class="auto-style1">Par 
+exemple, les données de l’onglet ‘Sortie brève’ peuvent être collées directement 
+dans l’outil IHSTAT</span><a href="#_ftn1" name="_ftnref1" style="mso-footnote-id: ftn1" title=""><span class="MsoFootnoteReference"><span style="mso-special-character: footnote"><![if !supportFootnotes]><span class="auto-style1" lang="FR" style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: FR; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">[1]</span><![endif]></span></span></a><span class="auto-style1"> 
+qui permet d’estimer un grand nombre de paramètres de la distribution 
+lognormale.</span><o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in; mso-add-space: auto; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l3 level1 lfo4">
+<![if !supportLists]>
+<span lang="FR" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR">
+<span style="mso-list: Ignore"><span class="auto-style1">2.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Sortie 
+(détaillée) <o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoListParagraphCxSpLast" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">Cliquer sur l</span><span lang="FR-CA" style="mso-ansi-language: FR-CA">’</span><span lang="FR" style="mso-ansi-language: FR">onglet 
+‘sortie détaillée’. Il contient quatre colonnes de données&nbsp;: les données brutes 
+(raw), les ‘plotting positions’ (pp, voir plus bas),<span style="mso-spacerun: yes">&nbsp;
+</span>les valeurs standard normales (ns, voir plus bas), et les valeurs finales 
+(‘final’).<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-left: 35.45pt"><span class="auto-style1">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">L’onglet </span>
+<span lang="FR" style="mso-ansi-language: FR">‘sortie détaillée’ contient du 
+texte en format tsv (valeurs séparées par des tabulations). Lorsqu’on effectue 
+un copier/coller de ces données dans un chiffrier comme EXCEL, elles devraient 
+le plus souvent apparaître dans des colonnes séparées, mais des exceptions 
+pourraient être rencontrées en fonction du fureteur utilisé et de la 
+configuration du chiffrier. Les valeurs calculées par NDexpo (pour les valeurs 
+censurées) sont affichées dans l’onglet ‘sortie’ avec une grande précision pour 
+le transfert dans un chiffrier. En revanche, la précision des données détectées 
+(qui ne sont pas transformées), reste telle que saisie. C’est 
+pourquoi&nbsp;l’apparence des données dans l’onglet ‘sortie détaillée’ pourrait 
+paraitre incohérente ou complexe. Les données de cet onglet sont destinées à 
+l’exportation dans un chiffrier.</span></span><span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpFirst" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent: -.25in; mso-list: l3 level1 lfo4">
+<![if !supportLists]>
+<span lang="FR-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR-CA">
+<span style="mso-list: Ignore"><span class="auto-style1">3.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR" style="mso-ansi-language: FR">Graphique 
+Quantile-Quantile (Q-Q plot).<span style="mso-spacerun: yes">&nbsp; </span>Un 
+graphique quantile-quantile, parfois appelé droite de Henry est affiché dans 
+NDexpo pour permettre d’évaluer graphiquement l’ajustement des données détectées 
+à une distribution lognormale. Les données estimées (valeurs censurées) sont 
+représentées par un cercle brun, et les données détectées par une croix rouge. 
+Pour visualiser la concentration associée à un point, amener le pointeur de la 
+souris au-dessus du point d’intérêt. NDexpo ne fournit pas les résultats d’un 
+test formel d’ajustement des données à la distribution lognormale (p.ex. le test 
+de Shapiro-Francia). En effet, ce type de test tend à être trop sévère pour des 
+jeux de grande taille (rejet quasi-systématique de l’hypothèse nulle de 
+lognormalité), et pas assez pour des jeux de petite taille. Nous partons de 
+l’hypothèse que les données d’exposition professionnelle suivent le modèle 
+lognormal&nbsp;; le graphique permettra d’identifier des dérives grossières et des 
+points aberrants. </span><span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p></o:p>
+</span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR-CA" style="mso-ansi-language: FR-CA">Ajout / remplacement de 
+valeurs<o:p></o:p></span></u></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Il est possible d’ajouter 
+simplement des valeurs supplémentaires et de refaire les calculs. Il suffit de 
+remplir une case supplémentaire et de presser ENTER. Pour éliminer une valeur, 
+effacer le contenu de la case correspondante et cliquer sur ‘Suppression des 
+lignes vides’. Appuyer ensuite sur ‘calcul’ pour relancer l’application.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">
+<a name="Restrictions_/_Messages_d’erreur">Restrictions / Messages d’erreur</a><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Il y a quelques restrictions 
+à l’utilisation de NDexpo.<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent: -.25in; mso-list: l1 level1 lfo5">
+<![if !supportLists]>
+<span lang="FR-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR-CA">
+<span style="mso-list: Ignore"><span class="auto-style1">1.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR-CA" style="mso-ansi-language: FR-CA">Un 
+minimum de 5 mesures est requis<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l1 level1 lfo5">
+<![if !supportLists]>
+<span lang="FR-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR-CA">
+<span style="mso-list: Ignore"><span class="auto-style1">2.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR-CA" style="mso-ansi-language: FR-CA">Un 
+minimum de 3 mesures détectées est requis<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l1 level1 lfo5">
+<![if !supportLists]>
+<span lang="FR-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR-CA">
+<span style="mso-list: Ignore"><span class="auto-style1">3.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR-CA" style="mso-ansi-language: FR-CA">Au moins 
+20% des mesures doivent être détectées<o:p></o:p></span></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent: -.25in; mso-list: l1 level1 lfo5">
+<![if !supportLists]>
+<span lang="FR-CA" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: FR-CA">
+<span style="mso-list: Ignore"><span class="auto-style1">4.</span><span class="auto-style1" style="font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>
+<span class="auto-style1" lang="FR-CA" style="mso-ansi-language: FR-CA">Les 
+valeurs de limite de quantification doivent être inférieures à la plus grande 
+valeur détectée<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Un message d’erreur sera 
+affiché si l’une des conditions précédentes n’est pas remplie.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Il n’y a pas de limite au 
+nombre de valeurs saisies dans NDexpo. Cependant, on peut s’attendre à observer 
+certains délais dans les calculs (dépendant du système) à partir de 200 mesures.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal"><span class="auto-style1">
+<a name="Principes_de_l’approche_Robust_ROS_">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">Principes de l’approche Robust ROS</span></b><span lang="FR" style="mso-ansi-language: FR-CA">
+</span></a></span><span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p></o:p>
+</span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">L’approche Robust ROS est 
+présentée en détail à la section 6.4 de l’édition 2012 de la monographie de 
+Dennis Helsel. Elle est résumée ci-dessous.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR-CA" style="mso-ansi-language: FR-CA">Principe d’un graphique 
+Q-Q <o:p></o:p></span></u></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">L’approche Robust ROS repose 
+sur le même principe général que le graphique Q-Q (également produit dans 
+NDexpo). Il d’agit de comparer les valeurs observées à des valeurs que l’on 
+aurait observées si les données proviennent d’une distribution connue. Avec la 
+distribution normale, on compare les données observées avec des données 
+provenant d’une distribution normale de même moyenne et écart-type. <o:p></o:p>
+</span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">La difficulté principale est 
+de déterminer à quelles valeurs de la distribution normale supposée chacune des 
+observations doit être comparée. Par exemple, imaginons 5 observations variant 
+de 93 à 108 ppm, avec une moyenne de 100 et un écart-type de 5. À quelle valeur 
+de la distribution normale de moyenne 100 et d’écart-type 5 dois-je comparer le 
+minimum de mes valeurs (93) ? Et ainsi de suite pour les 4 autres observations.<span style="mso-spacerun: yes">&nbsp;
+</span>Pour résoudre cette difficulté, on détermine ce qu’on appelle les 
+‘plotting positions’ ou pp.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Une valeur de pp peut être 
+définie comme la probabilité cumulée attendue correspondant à chaque observation 
+après qu’elles aient été ordonnées. Par exemple, le minimum de 5 valeurs tirées 
+d’une distribution normale devrait correspondre en moyenne à la probabilité 
+cumulée de 12% (c.a.d. 12% des valeurs de la distribution sont inférieures au 
+minimum des 5 valeurs). Cette probabilité correspond à -1.17 dans la loi normale 
+standard (-1.17 est la valeur ns, ‘normal score’ correspondant à 12%). Il en 
+découle que pour une loi normale de moyenne 100 et d’écart-type 5, la 
+probabilité cumulée de 12% correspond à 94 (100-1.17*5). Et voila ! Nous avons 
+une valeur à comparer à notre minimum 93 !<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Pour compléter le graphique 
+Q-Q, nous devons estimer une valeur pp pour chacune de nos observations, 
+calculer la valeur correspondante dans la loi normale standard puis dans la 
+distribution supposée. Le graphique Q-Q est simplement un graphe avec en 
+abscisse les valeurs attendues (calculées avec les valeurs pp), et en ordonnée 
+les valeurs observées.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Traditionnellement, il a été 
+courant<span style="mso-spacerun: yes">&nbsp; </span>de calculer la droite de 
+régression linéaire entre les observations et les valeurs de la distribution 
+normale standard (les valeurs ns). C’est ce qui est fait sans NDexpo, et 
+correspond à la droite de Henry. La qualité de l’ajustement indique l’adéquation 
+des mesures au modèle normal, et les paramètres de la droite permettent 
+d’estimer la moyenne et l’écart-type de la distribution.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Il y a plusieurs formules 
+pour calculer les valeurs pp des observations ordonnées. Elles dépendent en 
+général du type de distribution auquel on s’intéresse. Nous avons utilisé la 
+formule de Blom dans notre exemple <span style="mso-no-proof: yes">(Royston, 
+1993)</span>. La figure&nbsp;1 illustre le processus de création du graphique Q-Q</span><span style="mso-ansi-language: FR-CA">.</span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+&nbsp;</p>
+<p class="MsoNormal">
+<o:p>
+<img alt="" src=./figures/FIG1FR.jpg  /></o:p></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR-CA" style="mso-ansi-language: FR-CA">Du graphique Q-Q à la 
+procédure Robust ROS<o:p></o:p></span></u></p>
+<span class="auto-style1" lang="FR-CA" style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: FR-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+Le principe de l’approche est simple à expliquer une fois que l’on connait le 
+principe du graphique Q-Q (voir figure 2). La première étape consiste à ordonner 
+les observations. Les valeurs censurées sont insérées parmi les valeurs 
+détectées en fonction de la valeur de limite de quantification qui leur 
+correspond (le ‘x’ dans ‘&lt;x’). Ensuite, les valeurs pp sont calculées pour 
+chaque observation (incluant les valeurs censurées), et les valeurs 
+correspondantes de la loi normale standard sont déterminées. Comme montré aux 
+étapes 1 et 2 dans la figure 2, il y a un reclassement des données une fois les 
+valeurs pp calculées (en fonction de ces valeurs). L’étape suivante consiste à 
+effectuer une régression linéaire entre les valeurs détectées et les valeurs de 
+la loi normale standard déterminées précédemment. L’équation obtenue est alors 
+utilisée pour prédire une valeur pour chaque donnée censurée, basée sur sa 
+valeur pp. On obtient donc au final un jeu de données modifié, qui contient les 
+données détectées initiales, et les prédictions remplaçant les valeurs 
+censurées. Le processus complet est illustré à la figure 2.</span><span style="font-size: 11.0pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: FR-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><br />
+<br />
+</span>
+<span lang="FR-CA" style="font-size: 11.0pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: FR-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&nbsp;</span><p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">
+<o:p>
+<img alt="" src=./figures/FIG2FR.jpg  /></o:p></p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif">&nbsp;</p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Le jeu de données ainsi créé 
+peut être analysé comme n’importe quel jeu de données sans valeur censurée 
+(p.ex. tests d’hypothèses, estimation de percentiles ou de la fraction de 
+dépassement d’une valeur limite d’exposition). Il est important de noter que les 
+valeurs prédites remplaçant les valeurs censurées ne peuvent être interprétées à 
+un niveau individuel, uniquement pour l’analyse du jeu de données dans son 
+entier. C’est notamment apparent lorsque plusieurs données censurées ont la même 
+limite de quantification&nbsp;: on obtient des données prédites différentes, et il 
+n’est pas possible de savoir quelle valeur prédite assigner à quel échantillon 
+non détecté.<span style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">L’estimation des valeurs 
+‘plotting position’ représente le défi principal associé à la mise en œuvre de 
+l’approche Robust ROS. C’est particulièrement le cas lorsqu’il y a de multiples 
+valeurs de limites de quantification dans le jeu de données. Dennis Helsel 
+résume dans sa monographie plusieurs publications ayant réalisé des avancées 
+dans ce domaine, et propose une recommandation. Cette recommandation,<span style="mso-spacerun: yes">&nbsp;
+</span>mise en œuvre dans certains logiciels de traitement statistiques comme R 
+ou MINITAB, est utilisée par NDexpo.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR-CA" style="mso-ansi-language: FR-CA">L’approche Robust ROS et 
+les données lognormales<o:p></o:p></span></u></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Pour simplifier les 
+explications précédentes nous avons utilisé la distribution normale pour 
+illustrer procédure. Il y est maintenant bien connu que les données d’exposition 
+professionnelle sont le plus souvent conformes à la distribution lognormale. 
+Cette hypothèse est intégrée à NDexpo&nbsp;: Après la saisie des données, elles 
+subissent immédiatement une transformation logarithmique. La procédure décrite 
+précédemment est alors appliquée, et les prédictions des valeurs censurées sont 
+retransformées (transformation exponentielle) pour présentation et exportation.<span style="mso-spacerun: yes">&nbsp;
+</span>Il faut donc noter que l’utilisateur qui souhaiterait utiliser les 
+valeurs ns dans la ‘sortie détaillée’ pour effectuer une régression manuelle, 
+devrait donc commencer par transformer les mesures avant la régression.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR-CA" style="mso-ansi-language: FR-CA"><o:p>
+<span style="text-decoration: none">&nbsp;</span></o:p></span></u></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<a name="Le_cas_des_limites_que_quantification_adjacentes,_et_la_relation_entre_NDexpo_et_NADA">
+<span lang="FR" style="mso-ansi-language: FR">Le cas des limites que 
+quantification adjacentes, et la relation entre ND</span><span style="mso-ansi-language: FR"><o:p>expo 
+et NADA</span></a></o:p></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR" style="mso-ansi-language: FR">Introduction<o:p></o:p></span></u></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">NDexpo a été initialement 
+développé pour reproduire fidèlement la procédure décrite dans la monographie de 
+Helsel. La mise première mise en œuvre informatique de cette approche est une 
+extension gratuite au logiciel de statistique R appelé NADA. Depuis la seconde 
+édition de la monographie, une version existe également pour le logiciel 
+MINITAB. Nous avons largement utilisé l’extension NADA pour tester notre code et 
+valider nos résultats. <o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR" style="mso-ansi-language: FR">Il y a cependant certaines 
+circonstances (vor plus bas) pour lesquelles nous avons conclu qu’une 
+modification à la procédure telle qu’implémentée dans NADA était nécessaire. 
+Dans ces circonstances, les valeurs calculées par NDexpo seront différentes de 
+celle de NADA. Nous estimons que l’impact sur les calculs effectuées par la 
+suite (estimation de paramètres) sera mineur&nbsp;: la droite de régression à partir 
+de laquelle les valeurs censurées sont estimées reste la même, ce sont seulement 
+leur position sur la droite (déterminée par les valeurs ‘plotting position’) qui 
+est modifiée. Pour ne pas pénaliser les utilisateurs qui ne seraient pas 
+convaincus par notre argumentaire, un bouton dans NDexpo permet d’appliquer une 
+procédure qui reproduit intégralement l’extension NADA (le ‘mode’ NADA). Nous 
+prévoyons effectuer des simulations pour évaluer de façon rigoureuse les 
+différences entre NADA et NDexpo sur l’estimation de paramètres courants en 
+hygiène du travail (p.ex. fraction de dépassement d’une valeur limite).<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<u><span lang="FR-CA" style="mso-ansi-language: FR-CA">La modification proposée<o:p></o:p></span></u></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Le problème survient 
+lorsqu’il y a plusieurs valeurs censurées avec des LQ adjacentes après que les 
+données aient été ordonnées (voir figure 3). Sur la figure 3 on peut voir deux 
+groupes de valeurs censurées&nbsp;: trois à 1.5, et trois à 1 (il n’y a pas de valeur 
+détectées entre 1.5 et 1). À cause du caractère adjacent de ces deux groupes, 
+l’estimation de leurs valeurs ‘plotting positions’ est telle que l’espace de 
+probabilité entre la LQ et 0 est divisé de la même façon pour les deux groupes. 
+Cela conduit à des valeurs pp dans la colonne NADA de la figure 3&nbsp;: il 3 a trois 
+paires de valeurs égales, qui conduiraient à 3 paires de valeurs prédites 
+égales. Nous pensons que ce résultat n’est pas cohérent. Pour cet exemple, nous 
+pensons qu’il devrait y avoir 6 valeurs pp différentes, et que les 6 
+observations devraient être considérées comme un seul groupe de valeurs 
+censurées (voir figure 4)&nbsp;: L’espace de probabilité entre la LQ et 0 devrait 
+être divisé par 6 au lieu de l’être par 3 deux fois de suite. Le fait qu’il y 
+ait deux valeurs de LQ différentes<span style="mso-spacerun: yes">&nbsp; </span>
+(1.5 et 1) ne rentre pas en compte, parce qu’après le classement initial des 
+données, les valeurs de LQ ne sont plus utilisées par la procédure. Ce fait 
+représente une raison supplémentaire d’agréger les deux groupes de valeurs 
+censurées. Cette agrégation peut être simulée dans NADA en remplaçant les trois 
+valeurs &lt;1.5, et trois valeurs &lt;1 par 6 valeurs, censurées à 1.5 ou 1. Bien sûr 
+au niveau individuel, &lt;1 implique une information différente de &lt;1.5. Cependant 
+nous le répétons&nbsp;: dans la procédure ROS et puisqu’il n’y a pas de valeur 
+détecté entre<span style="mso-spacerun: yes">&nbsp; </span>1.5 et 1, la valeur 
+de LQ assignée au nouveau groupe n’a aucun impact. Cette astuce est précisément 
+ce qui est mis en œuvre dans NDexpo. Lorsque des groupes de valeurs censurées à 
+des LQ adjacentes sont détectés après le classement initial, un nouveau groupe 
+global est créé avec une seule LQ égale à la plus élevée des LQ adjacentes (nous 
+réitérons que ce choix de la valeur la plus haute, par exemple au lieu de la 
+plus faible, n’a aucune influence sur les calculs). Cette procédure n’est pas 
+visible pour l’utilisateur</span><span style="mso-ansi-language: FR-CA">.</span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+&nbsp;</p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">
+<o:p>
+<img alt="" src=./figures/FIG3FR.jpg  / /></o:p></p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">La situation problématique 
+apparait plus fortement si nous imaginons un groupe de 10 valeurs censurées, 
+avec la même LQ en exprimée masse, mais des LQ exprimées en concentration 
+légèrement différentes à cause de volumes d’échantillonnage quelque peu 
+différents. Dans ce cas la procédure NADA donnerait 10 valeurs prédites égales.<o:p></o:p></span></p>
+<p class="MsoNormal" style="font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">
+<span class="auto-style2" style="mso-spacerun: yes">&nbsp;</span><span class="auto-style2">Dans 
+le cas où les groupes de LQ adjacentes ont des tailles différentes (p.ex. 3 
+valeurs &lt;1.0 et 6 valeurs &lt;1.5), le problème est plus difficile à détecter car 
+les valeurs pp ne seront pas égales&nbsp;: l’espace de probabilité sera divisé par 3, 
+puis par 6. Cependant, nous considérons qu’il serait plus exact de le diviser 
+une seule fois par 9. </span> <o:p></o:p></span></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<span lang="FR-CA" style="mso-ansi-language: FR-CA">Nous avons présenté des 
+exemples marquant pour justifier notre approche. Cependant nous ne croyons pas 
+que le cas de valeurs LQ adjacentes est très fréquent, et nos résultats seront 
+donc identiques à NADA dans la plupart des cas. De plus, dans le cas de 
+différences, nous pensons que l’impact sur l’estimation devrait être 
+relativement mineur.<o:p></o:p></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">
+<o:p>
+<img alt="" src=./figures/FIG4FR.jpg  /></o:p></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="font-family: Arial, Helvetica, sans-serif; font-size: medium">
+<b style="mso-bidi-font-weight: normal">
+<span lang="FR" style="mso-ansi-language: FR">
+<a name="Incohérence_apparente_de_certains_résultats">Incohérence apparente de 
+certains résultats</a><o:p></o:p></span></b></p>
+<span class="auto-style1" lang="FR-CA" style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: FR-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+Il est probable qu’il se trouve certaines situations dans lesquelles une des 
+valeurs prédites pour les valeurs censurées se retrouve supérieure à la LQ 
+correspondante, voire même supérieure à la valeur détectée la plus proche. Cette 
+situation est associée à la qualité de l’ajustement des données détectées au 
+modèle lognormal. En effet, la procédure garanti que la valeur ‘pp’ d’une donnée 
+censurée sera inférieure à celle de la valeur détectée adjacente. Cependant, si 
+l’ajustement au modèle lognormal est mauvais, il est possible qu’une valeur 
+détectée soit inférieure à sa valeur attendue si l’ajustement était idéal, et ce 
+de manière à être inférieure à une valeur censurée adjacente (voir figure 5). Ce 
+type d’observation ne remet donc pas en cause la procédure ROS, il reflète 
+uniquement un manque d’adéquation du modèle lognormal aux données, qui devrait 
+être visible sur le graphique Q-Q.</span><span style="font-size: 11.0pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: FR-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><br />
+<br />
+</span>
+<span lang="FR-CA" style="font-size: 11.0pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: FR-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+<br />
+<img alt="" src=./figures/FIG5FR.jpg  /></span><p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<p class="MsoNormal">
+<o:p></o:p>
+</p>
+<div style="mso-element: footnote-list">
+	<![if !supportFootnotes]><br clear="all" />
+	<hr align="left" size="1" width="33%" /><![endif]>
+	<div id="ftn1" style="mso-element: footnote">
+		<p class="MsoFootnoteText">
+		<a href="#_ftnref1" name="_ftn1" style="mso-footnote-id: ftn1" title="">
+		<span class="MsoFootnoteReference"><span lang="EN-CA">
+		<span style="mso-special-character: footnote"><![if !supportFootnotes]>
+		<span lang="EN-CA" style="font-size: 10.0pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-CA; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+		[1]</span><![endif]></span></span></span></a><span lang="EN-CA">
+		<a href="http://sp4m.aiha.org/insideaiha/volunteergroups/EASC/Pages/EASCTopics.aspx">
+		http://sp4m.aiha.org/insideaiha/volunteergroups/EASC/Pages/EASCTopics.aspx</a><o:p></o:p></span></p>
+	</div>
+</div>
+
+</body>
+
+</html>

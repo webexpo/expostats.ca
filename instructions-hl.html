@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+ <head>
+	<script src="js/jquery.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129886253-13"></script>
+        <script>
+          $(document).ready(function() {
+            
+            $('a.download-link').click(function() {
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-129886253-13');
+            });
+          });
+        </script>
+        
+        
+        <meta charset="utf-8">
+        <title>Expostats - Outils statistiques pour l'interprétation des données d'hygiène</title>
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="">
+            <meta name="author" content="http://bootstraptaste.com">
+            <!-- css -->
+            <link rel="icon" href="favicon.ico" />
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+            <link href="css/jcarousel.css" rel="stylesheet">
+            <link href="css/flexslider.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+            <!-- Theme skin -->
+            <link href="skins/default.css" rel="stylesheet">
+            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+    </head>
+    
+    <body class="download-offline">
+        <div id="wrapper">
+            <!-- start header -->
+            <div id='header' class='header'>
+          <div class="navbar navbar-default navbar-static-top">
+            <div class="container-front">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                  <div class="navbar-brand" >
+                    <a href="index.html"><img class='logo fr' src='img/logo1-fr.png' /></a>
+                    <h5><span>Outils statistiques </span>pour l'interprétation des données d'hygiène</h5>
+                  </div>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li class="active"><a href="outils.html">Outils d'interprétation</a></li>
+                        <li><a href="webexpofr.html">Projet Webexpo</a></li>
+                        <li><a href="autresoutils.html">Autres Outils</a></li>
+						<li><a href="autresoutils.html">Liens</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+						<li><a href="en/offline-instructions.html"><img src="img/en.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</div> <!-- end header -->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>ExpostatsTools - Multi-outils hors-ligne - Guide d'usage</h2>
+
+                <h3>Installation</h3>
+                <ol>
+                  <li>
+                    <a href='www/ExpostatsTools_fr.exe' class="download-link">Téléchargez le fichier archive</a> (~320 Mo)
+                  </li>
+                  <li>
+                    Démarrez le processus d'extraction en double-cliquant sur le fichier
+                  </li>
+                  <li>
+                    Vous verrez comme premier panneau l'information suivante :<br>
+                    <img src='img/pb1.png' class="resize" />
+                    Ce message est affiché de la part d'un logiciel tier gratuit dont on se sert et peut être ignoré.<br>
+                    Cliquez sur «OK».
+                  </li>
+                  <li>
+                    Au deuxième panneau vous devez préciser où mettre le contenu de l'archive :<br>
+                    <img src='img/dest_fich_fr.png' class="resize" />
+                    Cliquez sur «Suivant» pour avancer.
+                  </li>
+                  <li>
+                    Au troisième vous avez l'option de faire placer un raccourci à votre multi-outils sur votre Bureau.<br>
+                    Il est recommandé que vous sélectionniez «Oui».
+                    <img src='img/raccourci_fr.png' class="resize" />
+                    Cliquez sur «Suivant» pour amorcer l'extraction du fichier archive.
+                  </li>
+                  <li>
+                    Pendant l'extraction vous verrez un panneau qui ressemble à celui ci-dessous :<br>
+                    <img src='img/decomp_fr.png' class="resize" />
+                  </li>
+                </ol>
+
+                <h3>Exécution</h3>
+                <ol>
+                  <li>
+                  Pour lancer le multi-outils, double-cliquez sur le raccourci que vous avez fait placer sur votre Bureau lors de l'installation.<br>
+                  Vous pouvez également ouvrir l'Explorateur Windows et aller au dossier dans lequel vous avez extrait le fichier archive :
+                  <img src='img/lancez.png' style='border:1px solid grey' class="resize" />
+                  Ensuite, double-cliquez sur l'exécutable «ExpostatsTools.bat»
+                </li>
+                <li>
+                  Quatre onglets (un pour chaque outil) s'ouvriront dans votre navigateur :
+                  <img src='img/onglets_fr.png' style='border:1px solid grey' class="resize" />
+                  Les outils roulent sur votre propre poste mais ont la même fonctionnalité que ceux sur <a href='outils.html'>expostats.ca</a>.<br>
+                  Une petite fenêtre apparaîtra en dehors du navigateur qui contient un bouton intitulé «Quitter».
+                </li>
+                <li>
+                  Quand vous êtes terminé, cliquez sur «Quitter» pour faire cesser le roulement des outils.
+                </li>
+                </ol>
+              <br>
+              <br>
+              <span style='font-style: italic'>Date de dernière mise à jour : </span><span id='maj_date'></span>
+            </div>
+          </div>
+        </div>
+      
+      </div> <!-- End of content -->
+	 <footer>
+                <div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>&copy; 2015 Expo Stats Tous droits réservés.</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li>Une réalisation de <a href="http://www.librelinux.ca" data-placement="top" title="LibreLinux">Libre Linux </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+            </footer>
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script type='text/javascript' src="js/init.js"></script>
+</body>
+</html>

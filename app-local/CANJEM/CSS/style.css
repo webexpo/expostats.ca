@@ -1,0 +1,142 @@
+
+span.clickableElement{
+  border-radius:5px;  
+  padding-top: 9px;
+  padding-bottom: 9px;
+  vertical-align: middle;
+  line-height:20px;
+  
+}
+
+span.clisckableElement{
+  
+}
+
+span.clickableElement:before { content: "\00a0\00a0 "; }
+span.clickableElement:after { content: "\00a0\00a0 "; }
+
+span.clickableElement:hover{
+    cursor:pointer;
+    
+}
+
+span.notLeafClosed{
+  line-height:32px;
+  -webkit-transition: background-color 0.2s; /* Safari */
+    transition: background-color 0.2s;
+    -webkit-transition-timing-function: ease;
+  background-color:#D3D3D3;
+}
+
+span.notLeafClosed:hover{
+  background-color:#A9A9A9;
+}
+
+span.notLeafOpen{
+  line-height:32px;
+  background-color:#A9A9A9;
+}
+
+span.leafClosed{
+  line-height:32px;
+  -webkit-transition: background-color 0.2s; /* Safari */
+  transition: background-color 0.2s;
+  -webkit-transition-timing-function: ease;
+  background-color:#62FD62;
+}
+
+span.leafClosed:hover{
+  background-color:#32CD32;
+}
+
+span.leafOpen{
+  line-height:32px;
+  background-color:#32CD32;
+}
+
+
+
+span.Category{
+    color:#F4F0EC;
+     background: #0083FF;
+}
+
+span.Category:hover{
+  background: #0053CF;
+}
+
+span.Group{
+  background: #00BCFF;
+}
+
+span.Group:hover{
+  background: #008CCF;
+}
+
+span.Family{
+  background: #00FFD2;
+}
+
+span.Family:hover{
+  background: #00CFA2;
+}
+
+span.SubFamily{
+  background: #00FF83;
+}
+
+span.SubFamily:hover{
+  background: #00CF53;
+}
+
+
+ul.collapsibleList{
+  list-style-type: none;
+  margin-left:-25px;
+}
+
+
+
+li.collapsibleListClosed{
+  /*font-weight:bold;
+  background:#4CBB17;
+  cursor:pointer;
+  background: -webkit-linear-gradient(left, white, #4CBB17); /* For Safari 5.1 to 6.0 
+  background: -o-linear-gradient(left, white, #4CBB17); /* For Opera 11.1 to 12.0 
+  background: -moz-linear-gradient(left, white, #4CBB17); /* For Firefox 3.6 to 15 
+  background: linear-gradient(to left, white, #4CBB17); /* Standard syntax (must be last) */
+}
+
+
+ul.description{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+div.description{
+  border: 1px solid #32CD32;
+  border-radius:5px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+
+#list{
+  display:block;
+  max-height:650px;
+  margin-top: 10px;
+  overflow-y:auto;
+}
+
+#list li:first-Child{
+  margin-top:7px;
+}
+
+
+
+#list li{
+  
+  margin:0 0 7px 0;
+}
